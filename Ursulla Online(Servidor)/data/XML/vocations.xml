@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vocations>
+	<vocation id="0" clientid="0" name="Nenhum" description="um nada" gaincap="4" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="0">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.6" />
+		<skill id="1" multiplier="1.6" />
+		<skill id="2" multiplier="1.6" />
+		<skill id="3" multiplier="1.6" />
+		<skill id="4" multiplier="1.6" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>
+  <vocation id="1" clientid="1" name="Guerreiro" description="um guerreiro" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="1">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="1.1" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="1.1" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.3" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>
+  <vocation id="2" clientid="2" name="Guardiao" description="um guardiao" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="2">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="1.1" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="1.1" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.2" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>	
+  <vocation id="3" clientid="3" name="Mago" description="um mago" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="1.4" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="3">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.5" />
+		<skill id="1" multiplier="1.8" />
+		<skill id="2" multiplier="1.8" />
+		<skill id="3" multiplier="1.8" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>		
+  <vocation id="4" clientid="4" name="Assassino" description="um assassino" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="1000" basespeed="220"  soulmax="100" gainsoulticks="120" fromvoc="4">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="1.1" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="1.1" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>	
+  <vocation id="5" clientid="5" name="Arqueiro" description="um arqueiro" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="5">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="1.2" />
+		<skill id="2" multiplier="1.2" />
+		<skill id="3" multiplier="1.2" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>
+	<vocation id="6" clientid="6" name="Atirador" description="um atirador" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="6">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.2" />
+		<skill id="1" multiplier="1.2" />
+		<skill id="2" multiplier="1.2" />
+		<skill id="3" multiplier="1.2" />
+		<skill id="4" multiplier="1.1" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>	
+	<!-- </vocation> -->
+    <vocation id="7" clientid="8" name="Barbaro" description="um barbaro" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="4.0" attackspeed="2000" basespeed="220" soulmax="100" gainsoulticks="120" fromvoc="7">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.1" />
+		<skill id="1" multiplier="1.1" />
+		<skill id="2" multiplier="1.1" />
+		<skill id="3" multiplier="1.1" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.3" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>	
+	<vocation id="8" clientid="9" name="Bardo" description="um bardo" gaincap="10" gainhp="0" gainmana="0" gainhpticks="2" gainhpamount="5" gainmanaticks="2" gainmanaamount="5" manamultiplier="1.4" attackspeed="2000" basespeed="220" dualwield="no" soulmax="100" gainsoulticks="120" fromvoc="8">
+		<formula meleeDamage="1.0" distDamage="1.0" defense="1.0" armor="1.0" />
+		<skill id="0" multiplier="1.5" />
+		<skill id="1" multiplier="1.8" />
+		<skill id="2" multiplier="1.8" />
+		<skill id="3" multiplier="1.8" />
+		<skill id="4" multiplier="1.8" />
+		<skill id="5" multiplier="1.9" />
+		<skill id="6" multiplier="1.1" />
+	</vocation>		
+</vocations>

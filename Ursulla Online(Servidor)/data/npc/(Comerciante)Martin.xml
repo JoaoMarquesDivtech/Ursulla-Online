@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Martin" script="gabriel.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="128" head="114" body="96" legs="97" feet="114" addons="0" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo e compro comida... diga {trade} se quiser algo!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="meat,2666,2;
+	    red mushroom,2788,4;
+	    white mushroom,2787,6;
+	    orange mushroom,2791,8;
+	    wood mushroom,2790,10;
+	    brown mushroom,2789,12;"/>
+		<parameter key="shop_sellable" value="meat,2666,1;
+	    red mushroom,2788,2;
+	    white mushroom,2787,3;
+	    orange mushroom,2791,4;
+	    wood mushroom,2790,5;
+	    brown mushroom,2789,6;"/>
+	</parameters>
+</npc>

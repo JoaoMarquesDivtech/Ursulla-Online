@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="orc lanceiro" nameDescription="a orc" race="blood" experience="250" speed="176" manacost="310">
+	<health now="275" max="275" />
+	<look type="50" corpse="5996" />
+	<targetchange interval="4000" chance="30" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag staticattack="90" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="physical" interval="2000" chance="45" range="5" min="-5" max="-60">
+			<attribute key="shootEffect" value="spear" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element firePercent="20" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Ugaar!" />
+	</voices>
+	<loot>
+		<item id="2666" chance="30000" />				<!-- meat -->
+		<item id="2389" chance="17000" />				<!-- spear -->
+		<item id="2468" chance="10000" />				<!-- studded legs -->
+		<item id="2482" chance="9000" />					<!-- studded helmet -->
+		<item id="2420" chance="3000" />					<!-- machete -->
+		<item id="12409" chance="10000" />				<!-- broken helmet -->		
+		<item id="12435" chance="2300" />				<!-- orc leather -->
+		<item id="11113" ccountmax="7" hance="2000" />				<!-- orc tooth -->
+		<item id="12436" chance="970" />					<!-- skull belt -->		
+	</loot>
+</monster>

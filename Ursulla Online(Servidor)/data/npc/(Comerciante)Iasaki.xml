@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Iasaki" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="133" head="116" body="114" legs="114" feet="46" addons="2" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo pedras de retorno! diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="teleport crystal,8302,50;"/>
+	</parameters>
+</npc>

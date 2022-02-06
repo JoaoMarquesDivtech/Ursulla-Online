@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="duplicate" nameDescription="a duplicate" race="blood" experience="65" speed="180" manacost="450">
+	<health now="245" max="245" />
+	<look type="129" head="0" body="0" legs="0" feet="0"  />
+	<targetchange interval="5000" chance="5" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="25" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-10" />
+	</attacks>
+	<defenses armor="15" defense="15" />
+	<elements>
+		<element physicalPercent="-10" />
+		<element deathPercent="-5" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Your money or your life!" />
+		<voice sentence="Hand me your purse!" />
+	</voices>
+	<loot>
+	</loot>
+</monster>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="goblin lider" nameDescription="a goblin" race="blood" experience="2470" speed="250" manacost="310">
+	<health now="900" max="900" />
+	<look type="297" corpse="6002" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="10" attack="15" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="0" max="-70">
+			<attribute key="shootEffect" value="smallstone" />
+		</attack>
+		<attack name="physical" interval="2000" chance="10" range="7" min="0" max="-140">
+			<attribute key="shootEffect" value="spear" />
+		</attack>
+
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="healing" interval="2000" chance="15" min="10" max="16">
+			<attribute key="areaEffect" value="energy" />
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="20" />
+		<element holyPercent="1" />
+		<element earthPercent="-10" />
+		<element deathPercent="-10" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="hihihi!" />
+	</voices>
+	<loot>
+		<item id="1294" countmax="2" chance="25560" /><!-- small stone -->
+		<item id="26382" chance="20000" /><!-- pedra da alma(I) -->
+		<item id="26383" chance="1000" /><!-- pedra da alma(II) -->
+		<item id="5907" chance="10000" /><!-- slingshot -->
+		<item id="2230" chance="12450" /><!-- bone -->
+		<item id="2559" chance="9790" /><!-- small axe -->
+		<item id="2667" chance="13640" /><!-- fish -->
+		<item id="2461" chance="10180" /><!-- leather helmet -->
+		<item id="2235" chance="7000" /><!-- moldy cheese -->
+		<item id="2406" chance="8900" /><!-- short sword -->
+		<item id="2467" chance="7700" /><!-- leather armor -->
+		<item id="26410" chance="300" /><!-- goblin helmet -->		
+		<item id="26411" chance="300" /><!-- goblin armor -->		
+		<item id="26412" chance="300" /><!-- goblin legs -->		
+		<item id="26413" chance="300" /><!-- goblin boots -->			
+		<item id="2386" chance="1500" /><!-- axe -->			
+		<item id="2182" chance="1500" /><!-- snakebit rod -->			
+		<item id="2404" chance="1500" /><!-- combat knife -->			
+		<item id="2485" chance="1500" /><!-- sabre-->			
+		<item id="2405" chance="1500" /><!-- sickle-->			
+		<item id="2456" chance="1500" /><!-- crossbow -->			
+		<item id="2455" chance="1500" /><!-- arrow -->	
+		<item id="2449" chance="1500" /><!-- bone club -->		
+		<item id="2544" countmax = "12" chance="1500" />			
+		<item id="2543" countmax = "12" chance="1500" />			
+		<item id="2389" countmax = "2" chance="1500" />			
+		<item id="2173" chance="2000" /><!-- aol -->	
+		<item id="26552" chance="2000" /><!-- chave de bronze -->	
+	</loot>
+</monster>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lizi" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="137" head="0" body="114" legs="114" feet="114" addons="1" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo carne e compro tambem! diga {trade} se quiser algo!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="meat,2666,2;
+		ham,2671,2"/>
+		<parameter key="shop_sellable" value="meat,2666,1;
+		ham,2666,1;"/>
+	</parameters>
+</npc>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="joaninha" nameDescription="a joaninha" race="venom" experience="270" speed="200" manacost="0">
+	<health now="455" max="455" />
+	<look type="448" corpse="15272" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="0" />
+		<flag runonhealth="60" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="5" attack="5" />
+		<attack name="earth" interval="2000" chance="15" range="1" min="0" max="-46">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" range="7" min="0" max="-57">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Nee pah!" />
+	</voices>
+	<elements>
+		<element earthPercent="5" />
+		<element physicalPercent="-5" />
+		<element firePercent="-5" />
+		<element icePercent="-5" />
+	</elements>
+</monster>

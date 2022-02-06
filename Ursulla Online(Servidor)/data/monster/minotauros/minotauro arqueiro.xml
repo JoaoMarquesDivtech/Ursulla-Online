@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="minotauro arqueiro" nameDescription="a minotauro" race="blood" experience="143" speed="225" manacost="390">
+	<health now="155" max="155" />
+	<look type="24" corpse="5982" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="5" />
+		<flag staticattack="90" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="physical" interval="3000" chance="90" range="5" min="-20" max="-80">
+			<attribute key="shootEffect" value="bolt" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element physicalPercent="5" />
+		<element deathPercent="-5" />
+		<element firePercent="-5" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Hurr!" />
+		<voice sentence="Grrr!" />
+	</voices>
+	<loot>
+		<item id="2543" countmax="20" chance="90450" />	<!-- bolt -->
+		<item id="2666" countmax="3" chance="10000" /><!-- meat -->
+		<item id="12407" chance="15400" />				<!-- broken crossbow -->
+		<item id="7363" countmax="4" chance="12340" />	<!-- piercing bolt -->
+		<item id="12439" chance="8260" />				<!-- piece of archer armor -->
+		<item id="2666" chance="5000" />					<!-- meat -->
+		<item id="12428" countmax="2" chance="2000" />	<!-- minotaur horn -->
+		<item id="5878" chance="1900" />					<!-- minotaur leather -->
+		<item id="2455" chance="830" />					<!-- crossbow -->
+		<item id="2465" chance="530" />					<!-- brass armor -->
+		<item id="2483" chance="530" />					<!-- scale armor -->
+		<item id="26382" chance="75" /><!-- pedra da alma(I) -->
+		<item id="26383" chance="10" /><!-- pedra da alma(II) -->
+		<item id="26384" chance="1" /><!-- pedra da alma(II) -->
+	</loot>
+</monster>

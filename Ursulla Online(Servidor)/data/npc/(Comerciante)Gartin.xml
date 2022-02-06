@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Gartin" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="159" head="115" body="114" legs="97" feet="69" addons="3" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo e compro munições, tem algo para fazer aqui? diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="simple arrow,23839,2;
+	    arrow,2544,3;
+	    bolt,2543,3;
+		spear,2389,5;
+        throwing star,2399,4;"/>
+	</parameters>
+</npc>

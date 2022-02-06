@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="lobisomem" nameDescription="a lobisomem" race="blood" experience="1400" speed="325" manacost="290">
+	<health now="1400" max="1400" />
+	<look type="308" head="39" body="0" legs="0" feet="114" addons="1" corpse="20379" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="500" min="-50" max="-150" />
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="speed" interval="2000" chance="25" speedchange="325" duration="6000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" interval="20000" chance="50" min="60" max="110">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element holyPercent="-40" />
+		<element deathPercent="30" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="GRRRRRRRRRRRRRRRR!" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="222" chance="50320" /><!-- gold coin -->
+		<item id="2667" chance="12750" /><!-- fish -->
+		<item id="5913" chance="2478" /><!-- brown piece of cloth -->
+		<item id="2467" chance="500" /><!-- brass legs -->
+		<item id="2465" chance="500" /><!-- brass armor -->
+		<item id="2465" chance="500" /><!-- brass helmet -->
+		<item id="2456" chance="500" /><!-- bow -->
+		<item id="2544" countmax="5" chance="2000" /><!-- arrow -->
+		<item id="1294" countmax="3" chance="15290" /><!-- small stone -->
+		<item id="2475" chance="3000" />					<!-- warrior helmet -->
+		<item id="2647" chance="5000" />					<!-- plate legs -->
+		<item id="11234" countmax="4" chance="10500"  />				<!-- werewolf fur -->
+		<item id="24708" chance="5500" />					<!-- werewolf fang -->		
+		<item id="5909" countmax="10" chance="5290" /><!-- white piece of cloth -->
+		<item id="26552" chance="2000" /><!-- chave de bronze -->			
+	</loot>
+</monster>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<raid>
+<announce delay="1000" type="event" message="Foi visto o grande corredor branco pelas redondezas de Brain!." />
+  <areaspawn delay="2000" fromx="986" fromy="998" fromz="4" tox="998" toy="1014" toz="4">
+      <monster name="Cervo Branco" amount="1" />
+  </areaspawn>
+</raid>

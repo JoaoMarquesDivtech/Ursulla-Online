@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="gord" nameDescription="a humano" race="blood" experience="0" speed="230" manacost="420">
+	<health now="3350" max="3350" />
+	<look type="131" head="114" body="114" legs="0" feet="114" addons="1" corpse="0" />
+	<targetchange interval="4000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag runonhealth="10" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="60" max="-130" />
+		<attack name="physical" interval="3000" chance="60" range="4" min="-70" max="-80">
+			<attribute key="shootEffect" value="bolt" />
+		</attack>
+		<attack name="physical" interval="5000" chance="3" range="7" min="-100" max="-300">
+			<attribute key="shootEffect" value="whirlwindclub" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="speed" interval="2000" chance="5" speedchange="600" duration="2000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element holyPercent="10" />
+		<element physicalPercent="-5" />
+		<element deathPercent="-5" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Meu inimigo!" />
+		<voice sentence="Quer impedir que sua laia morra?? Hahaha" />
+	</voices>
+	<loot>
+		<item id="2386" chance="30000" />				<!-- axe -->
+		<item id="2511" chance="17000" />				<!-- brass shield -->
+		<item id="2398" chance="10000" />				<!-- mace -->
+		<item id="2328" countmax="2" chance="10000" />	<!-- egg -->
+		<item id="2458" chance="5000" />					<!-- chain helmet -->
+		<item id="2465" chance="2500" />					<!-- brass armor -->
+		<item id="2509" chance="950" />					<!-- steel shield -->
+		<item id="2459" chance="540" />					<!-- iron helmet -->
+		<item id="2110" chance="490" />					<!-- doll -->
+	</loot>
+	<script>
+    <event name="boss1"/>
+    </script>
+</monster>

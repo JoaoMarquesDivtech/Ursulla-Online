@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Legoba" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="64" head="115" body="114" legs="97" feet="69" addons="3" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo e compro armas a distancia, tem algo para fazer aqui? diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_sellable" value="crossbow,2455,30;
+	    modified crossbow,8849,400;
+	    bow ,2456,30;
+	    elvish bow ,7438,400;"/>
+		<parameter key="shop_buyable" value="crossbow,2455,15;
+	    modified crossbow,8849,250;
+	    royal crossbow,8851,400;
+	    bow ,2456,15;
+	    elvish bow ,7438,250;
+	    yol's bow ,8856,400;"/>
+</parameters>
+</npc>

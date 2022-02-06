@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Tiso" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="159" head="116" body="57" legs="97" feet="59" addons="0" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu compro items da dungeon, voce tem algo ai? diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_sellable" value="troll green,2805,4;
+	mouldy cheese,2235,1;
+	centipede leg,11218,10;
+	wood,5901,3;
+	swamp grass,10603,5;
+	medicine pouch,13506,20;
+	downy feather,12640,22;
+	shadow herb,2804,7;
+	corncob,2686,4;
+	seeds,7732,5;
+	carniphila seeds,11217,10;
+	sling herb,2802,6;
+	badger fur,7965,10;
+	tusk,3956,15;
+	clay lump,11339,7;
+	coal,13757,25;
+	lump of dirt,11222,13;
+	skull,2229,2;
+	voodo doll,3955,120;
+	acorn,11213,11;
+	spider fangs,8859,6;
+	tarantula egg,11198,25;
+	widow's mandibles,11328,40;
+	poison spider shell,12441,7;
+	small smerald,2149,150;
+	small amethist,2150,150;
+    dowser,21427,7;
+    fir cone,21428,8;
+    ape fur,5883,4;
+    kongra shoulderpad,12427,22;
+    banana sash,12467,13;
+    bamboo stick,12401,10;
+    panther paw,13027,40;
+    panther head,13026,110;"/>
+	</parameters>
+</npc>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ANSI"?>
+<monsters>
+<!--summons-->	
+    
+    <!--Espadachim-->
+    <monster name="duplicate" file="summons/duplicate.xml" />
+	<!--Mago Das trevas-->
+	<monster name="esqueleto[0]" file="summons/esqueleto[0].xml" />
+	<monster name="esqueleto[1]" file="summons/esqueleto[1].xml" />
+	<monster name="esqueleto[2]" file="summons/esqueleto[2].xml" />
+	<monster name="esqueleto[3]" file="summons/esqueleto[3].xml" />
+	<monster name="esqueleto[4]" file="summons/esqueleto[4].xml" />
+	<monster name="esqueleto[5]" file="summons/esqueleto[5].xml" />
+	<monster name="esqueleto[6]" file="summons/esqueleto[6].xml" />
+	<monster name="esqueleto[7]" file="summons/esqueleto[7].xml" />
+	<monster name="esqueleto[8]" file="summons/esqueleto[8].xml" />
+	<monster name="esqueleto Demonio[0]" file="summons/esqueleto demonio[0].xml" />
+	<monster name="esqueleto Demonio[1]" file="summons/esqueleto demonio[1].xml" />
+	<monster name="esqueleto Demonio[2]" file="summons/esqueleto demonio[2].xml" />
+	<monster name="esqueleto Demonio[3]" file="summons/esqueleto demonio[3].xml" />
+	<monster name="esqueleto Demonio[4]" file="summons/esqueleto demonio[4].xml" />
+	<monster name="esqueleto Demonio[5]" file="summons/esqueleto demonio[5].xml" />
+	<monster name="esqueleto Demonio[6]" file="summons/esqueleto demonio[6].xml" />
+	<monster name="esqueleto Demonio[7]" file="summons/esqueleto demonio[7].xml" />
+	<monster name="esqueleto Demonio[8]" file="summons/esqueleto demonio[8].xml" />
+
+
+<!--chefoes-->	
+	<monster name="gord" file="chefoes/gord.xml" />	
+	<monster name="luck" file="chefoes/luck.xml" />	
+	
+<!--Animais selvagens-->
+	<monster name="veado" file="selvagens/veado.xml" />
+	<monster name="lobo" file="selvagens/lobo.xml" />
+	<monster name="urso" file="selvagens/urso.xml" />
+	<monster name="rato" file="selvagens/rato.xml" />
+	<monster name="rato de caverna" file="selvagens/rato de caverna.xml" />
+	<monster name="morcego" file="selvagens/morcego.xml" />
+	<monster name="porco" file="selvagens/porco.xml" />
+	<monster name="galinha" file="selvagens/galinha.xml" />
+	<monster name="cervo branco" file="selvagens/cervo branco.xml" />
+	<monster name="ovelha negra" file="selvagens/ovelha negra.xml" />
+	<monster name="ovelha" file="selvagens/ovelha.xml" />
+	<monster name="jegue" file="selvagens/jegue.xml" />
+	<monster name="texugo" file="selvagens/texugo.xml" />
+	<monster name="panda" file="selvagens/panda.xml" />
+	<monster name="flamingo" file="selvagens/flamingo.xml" />
+	<monster name="papagaio" file="selvagens/papagaio.xml" />
+	<monster name="tigre" file="selvagens/tigre.xml" />
+	<monster name="elefante" file="selvagens/elefante.xml" />
+	<monster name="pantera negra" file="selvagens/pantera negra.xml" />
+	<monster name="ave do terror" file="selvagens/ave do terror.xml" />
+<!--Trolls-->
+	<monster name="troll da natureza" file="trolls/troll da natureza.xml"/>
+	<monster name="troll de caverna" file="trolls/troll de caverna.xml"/>
+	<monster name="troll lider" file="trolls/troll lider.xml"/>
+<!--sangue-sugas-->
+	<monster name="sangue suga" file="sangue sugas/sangue suga.xml"/>
+	<monster name="demonio suga" file="sangue sugas/demonio suga.xml"/>
+	<monster name="carne come" file="sangue sugas/carne come.xml"/>
+	<monster name="chupa sangue" file="sangue sugas/chupa sangue.xml"/>
+	<monster name="gigante come" file="sangue sugas/gigante come.xml"/>
+<!--Goblins-->	
+    <monster name="goblin guerreiro" file="goblins/goblin guerreiro.xml"/>	
+    <monster name="goblin assassino" file="goblins/goblin assassino.xml"/>		
+    <monster name="goblin lider" file="goblins/goblin lider.xml"/>		
+    <monster name="goblin explorador" file="goblins/goblin explorador.xml"/>
+    <monster name="hoggoblin guerreiro" file="goblins/hoggoblin guerreiro.xml"/>		
+    <monster name="hoggoblin mago" file="goblins/hoggoblin mago.xml"/>		
+    <monster name="hoggoblin de guerra" file="goblins/hoggoblin de guerra.xml"/>		
+    <monster name="hoggoblin combatente" file="goblins/hoggoblin combatente.xml"/>		
+    <monster name="hoggoblin general" file="goblins/hoggoblin general.xml"/>		
+<!--humanos-->
+    <monster name="caçador" file="humanos/cacador.xml"/>	
+    <monster name="ladrao" file="humanos/ladrao.xml"/>	
+    <monster name="bandido" file="humanos/bandido.xml"/>	
+    <monster name="mama" file="humanos/mama.xml"/>	
+    <monster name="guerreiro negro" file="humanos/guerreiro negro.xml"/>	
+    <monster name="heroi" file="humanos/heroi.xml"/>	
+<!--minotauro-->
+    <monster name="minotauro" file="minotauros/minotauro.xml"/>
+    <monster name="minotauro guerreiro" file="minotauros/minotauro guerreiro.xml"/>
+    <monster name="minotauro arqueiro" file="minotauros/minotauro arqueiro.xml"/>
+    <monster name="minotauro mago" file="minotauros/minotauro mago.xml"/>
+    <monster name="minotauro duelista" file="minotauros/minotauro duelista.xml"/>
+    <monster name="minotauro xama" file="minotauros/minotauro xama.xml"/>
+    <monster name="minotauro lanceiro" file="minotauros/minotauro lanceiro.xml"/>
+    <monster name="minotauro executor" file="minotauros/minotauro executor.xml"/>
+    <monster name="rei minotauro" file="minotauros/rei minotauro.xml"/>
+<!--insetos-->
+	<monster name="inseto" file="insetos/inseto.xml"/>
+	<monster name="vespa" file="insetos/vespa.xml"/>
+	<monster name="joaninha" file="insetos/joaninha.xml"/>
+	<monster name="centopeia" file="insetos/centopeia.xml"/>
+<!--aranhas-->
+	<monster name="aranha" file="aranhas/aranha.xml"/>
+	<monster name="aranha venenosa" file="aranhas/aranha venenosa.xml"/>
+	<monster name="tarantula" file="aranhas/tarantula.xml"/>
+	<monster name="viuva negra" file="aranhas/viuva negra.xml"/>
+<!--magos-->
+    <monster name="bruxa" file="magos/bruxa.xml"/>	
+<!--treino-->
+    <monster name="boneco de treino" file="treino/boneco de treino.xml"/>	
+<!--transmorfo-->
+    <monster name="humano da caverna" file="lobisomem/humano da caverna.xml"/>		
+    <monster name="humano da caverna enraivado" file="lobisomem/humano da caverna enraivado.xml"/>		
+    <monster name="lobisomem" file="lobisomem/lobisomem.xml"/>		
+<!--drag-->	
+    <monster name="wyvern" file="dragoes/wyvern.xml"/>	
+    <monster name="dragao" file="dragoes/dragao.xml"/>	
+    <monster name="dragao filhote" file="dragoes/dragao filhote.xml"/>	
+    <monster name="demodras" file="dragoes/demodras.xml"/>	
+<!--orcs-->	
+    <monster name="orc" file="orcs/orc.xml"/>
+    <monster name="orc guerreiro" file="orcs/orc guerreiro.xml"/>
+    <monster name="orc mago" file="orcs/orc mago.xml"/>
+    <monster name="orc lanceiro" file="orcs/orc lanceiro.xml"/>
+<!--gigantes-->	
+    <monster name="gigante" file="gigantes/gigante.xml"/>
+    <monster name="gigante pedreiro" file="gigantes/gigante pedreiro.xml"/>
+    <monster name="rei gigante" file="gigantes/rei gigante.xml"/>
+<!--cyclops-->	
+    <monster name="cyclops" file="cyclops/cyclops.xml"/>	
+    <monster name="cyclops pedreiro" file="cyclops/cyclops pedreiro.xml"/>	
+    <monster name="rei cyclops" file="cyclops/rei cyclops.xml"/>	
+<!--espectador-->	
+    <monster name="o espectador" file="espectador/o espectador.xml"/>	
+<!--plantas-->	
+    <monster name="planta carnivora" file="plantas selvagens/planta carnivora.xml"/>	
+<!--golem-->	
+    <monster name="golem de planta" file="golens/golem de planta.xml"/>	
+    <monster name="golem da terra" file="golens/golem da terra.xml"/>	
+    <monster name="golem de pedra" file="golens/golem de pedra.xml"/>	
+<!--macacos-->
+    <monter name="gorila" file="macacos/gorila.xml"/>	
+    <monter name="babuino" file="macacos/babuino.xml"/>	
+    <monter name="babuino mago" file="macacos/babuino mago.xml"/>	
+<!--duende-->	
+    <monter name="duende canibal" file="duendes/duende canibal.xml"/>	
+    <monter name="duende arcanista" file="duendes/duende arcanista.xml"/>	
+    <monter name="duende assassino" file="duendes/duende assassino.xml"/>	
+<!--esqueleto-->
+    <monter name="esqueleto" file="esqueletos/esqueleto.xml"/>	
+<!--fantasma-->
+    <monter name="fantasma" file="fantasmas/fantasma.xml"/>		
+</monsters>

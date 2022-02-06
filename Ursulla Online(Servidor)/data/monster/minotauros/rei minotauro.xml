@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="rei minotauro" nameDescription="a minotauro nobre" race="blood" experience="30000" speed="260" manacost="0">
+	<health now="12000" max="12000" />
+	<look type="607" corpse="23367" />
+	<targetchange interval="2000" chance="3" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="110" attack="50" />
+		<attack name="physical" interval="2000" chance="13" length="3" spread="0" min="-100" max="-230">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="physical" interval="2000" chance="12" radius="3" target="0" min="-100" max="-200">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="19" radius="5" target="0" min="-50" max="-225">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" range="7" target="1" radius="4" min="-150" max="-235">
+			<attribute key="shootEffect" value="largerock" />
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="healing" interval="2000" chance="9" min="50" max="150">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="1" />
+		<element icePercent="15" />
+		<element firePercent="1" />
+		<element deathPercent="1" />
+	</elements>
+	<voices interval="2000" chance="5">
+		<voice sentence="MOOOOH!" yell="1" />
+		<voice sentence="Grrrr." />
+		<voice sentence="Raaaargh!" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="3" chance="10000" /><!-- meat -->
+		<item id="23573" countmax="7" chance="15030" />		<!-- mooh'tah shell -->
+		<item id="7589" countmax="5" chance="71100" />		<!-- strong mana potion -->
+		<item id="7588" countmax="5" chance="63900" />		<!-- strong health potion -->
+		<item id="5878" countmax="5" chance="55300" />		<!-- minotaur leather -->
+		<item id="2147" countmax="5" chance="54700" />		<!-- small ruby -->
+		<item id="2149" countmax="5" chance="52800" />		<!-- small emerald -->
+		<item id="2150" countmax="5" chance="52000" />		<!-- small amethyst -->
+		<item id="9970" countmax="5" chance="47600" />		<!-- small topaz -->
+		<item id="12428" countmax="6" chance="47010" />		<!-- minotaur horn -->
+		<item id="2207" chance="11100" />						<!-- sword ring -->
+		<item id="23537" chance="17000" />					<!-- mooh'tah plate -->
+		<item id="2477" chance="7100" />						<!-- knight legs -->
+		<item id="5911" countmax="1" chance="65000" />			<!-- red piece of cloth -->
+		<item id="2476" chance="49000" />						<!-- knight armor -->
+		<item id="7401" chance="15000" />						<!-- minotaur trophy -->
+		<item id="2186" chance="15000" />						<!-- Moonlight Rod  -->
+		<item id="2438" chance="15000" />						<!-- Epee  -->
+		<item id="2387" chance="15000" />						<!-- Double Axe  -->
+		<item id="2395" chance="15000" />						<!-- Fiel Sword  -->
+		<item id="2435" chance="15000" />						<!-- Ceifin axe  -->
+		<item id="2423" chance="15000" />						<!-- Clerical mace  -->
+		<item id="7404" chance="15000" />						<!-- Ladin Dagger  -->
+		<item id="8851" chance="15000" />						<!-- Royal Crossbow  -->
+		<item id="8856" chance="15000" />						<!-- Yol's bow  -->
+		<item id="2411" chance="15000" />						<!-- Poison Dagger  -->
+		<item id="2075" chance="15000" />						<!-- simple fanfare -->		
+		<item id="26383" countmax="4" chance="10000" /><!-- pedra da alma(II) -->
+		<item id="26384" countmax="2" chance="4000" /><!-- pedra da alma(III) -->	
+		<item id="26385"  chance="4000" /><!-- pedra da alma(IV) -->		
+		<item id="2173" chance="2000" /><!-- aol -->	
+		<item id="13293" chance="15000" /><!-- aol -->	
+		<item id="26552" chance="5000" /><!-- chave de platina -->			
+	</loot>
+	<script>
+    <event name="boss1"/>
+    </script>
+</monster>

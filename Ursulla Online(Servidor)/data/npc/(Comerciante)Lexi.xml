@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Lexi" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="159" head="114" body="114" legs="43" feet="0" addons="1" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo todo o tipo de armas... diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="long sword,2397,50;
+		morning star,2394,50;
+		halberd,2381,50;
+		sword,2376,50;
+		hand axe,2380,50;
+		katana,2412,50;
+		Scocher,23719,50;
+		chiller,23721,50;
+		knife,2403,50;
+        lyre,2071,50;
+		bow, 2456,50;
+		crossbow, 2455, 50;"/>
+		<parameter key="shop_sellable" value="long sword,2397,25;
+		morning star,2394,25;
+		halberd,2381,25;
+		sword,2376,25;
+		hand axe,2380,25;
+		katana,2412,25;
+		Scocher,23719,25;
+		chiller,23721,25;
+		knife,2403,25;
+        lyre,2071,25;
+		bow, 2456,25;
+		crossbow, 2455, 25;
+		axe, 2386, 40;
+		snakebit rod, 2182, 40;
+		combat knife, 2404, 40;
+		sabre, 2485, 40;
+		sickle, 2405, 40;
+		bone club, 2449, 40;"/>
+	   </parameters>
+</npc>

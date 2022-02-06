@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="rei gigante" nameDescription="a gigante" race="blood" experience="20255" speed="310" manacost="695">
+	<health now="9435" max="9435" />
+	<look type="920" corpse="7740" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="60" attack="60" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="0" max="-270">
+			<attribute key="shootEffect" value="whirlwindclub" />
+		</attack>
+		<attack name="drunk" interval="2000" chance="38" duration="4000">
+			<attribute key="shootEffect" value="whirlwindclub" />
+			<attribute key="areaEffect" value="stun" />
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="25" />
+	<elements>
+		<element energyPercent="20" />
+		<element firePercent="10" />
+		<element holyPercent="1" />
+		<element earthPercent="-10" />
+		<element deathPercent="-5" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Outis emoi g' onoma." />
+		<voice sentence="Whack da humy!" />
+		<voice sentence="Ai humy phary ty kaynon" />
+	</voices>
+	<loot>
+		<item id="2666" chance="49950" /><!-- meat -->
+		<item id="2513" chance="6190" /><!-- battle shield -->
+		<item id="2417" chance="5200" /><!-- battle hammer -->
+		<item id="2510" chance="800" /><!-- plate shield -->
+		<item id="2463" chance="80000" /><!-- plate armor -->
+		<item id="2647" chance="8000" /><!-- plate legs -->
+		<item id="2490" chance="8000" /><!-- dark helmet -->		
+		<item id="2525" chance="8000" /><!-- dwarven shield -->		
+		<item id="2378" chance="5450" /><!-- battle axe -->
+		<item id="2442" chance="2000" /><!-- heavy machete -->
+		<item id="2387" chance="880" /><!-- double axe -->
+		<item id="2490" chance="200" /><!-- dark helmet -->
+		<item id="7398" chance="140" /><!-- cyclops trophy -->
+		<item id="7588" chance="3900" /><!-- strong health potion -->
+		<item id="2209" chance="90" /><!-- club ring -->
+		<item id="7452" chance="150" /><!-- spiked squelcher -->
+		<item id="7398" chance="80" countmax="5" /><!-- cyclops trophy -->		
+		<item id="2173" chance="2000" /><!-- aol -->	
+		<item id="26552" chance="2000" /><!-- chave de platina -->			
+	</loot>
+</monster>

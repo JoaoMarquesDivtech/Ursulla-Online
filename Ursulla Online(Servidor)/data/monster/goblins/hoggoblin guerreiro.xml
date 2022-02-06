@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="hoggoblin guerreiro" nameDescription="a hoggoblin" race="blood" experience="205" speed="150" manacost="290">
+	<health now="170" max="170" />
+	<look type="912" corpse="6002" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="22" />
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element energyPercent="20" />
+		<element holyPercent="1" />
+		<element earthPercent="-12" />
+		<element deathPercent="-10" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Vou cortar seu corpo todinhoo!" />
+		<voice sentence="O general mandou te matar hahah" />
+	</voices>
+	<loot>
+		<item id="2230" chance="1130" /><!-- bone -->
+		<item id="2449" chance="4900" /><!-- bone club -->
+		<item id="2379" chance="1800" /><!-- dagger -->
+		<item id="2667" chance="12750" /><!-- fish -->
+		<item id="2467" chance="2510" /><!-- leather armor -->
+		<item id="2461" chance="1940" /><!-- leather helmet -->
+		<item id="2235" chance="1000" /><!-- moldy cheese -->
+		<item id="2406" chance="8870" /><!-- short sword -->
+		<item id="2559" chance="9700" /><!-- small axe -->
+		<item id="1294" countmax="3" chance="15290" /><!-- small stone -->
+		<item id="7438" chance="25" /><!-- weapon-classe -->
+		<item id="8849" chance="25" /><!-- weapon-classe -->
+		<item id="26392" chance="25" /><!-- weapon-classe -->
+		<item id="2418" chance="25" /><!-- weapon-classe -->
+		<item id="2419" chance="25" /><!-- weapon-classe -->
+		<item id="2377" chance="25" /><!-- weapon-classe -->
+		<item id="2378" chance="25" /><!-- weapon-classe -->
+		<item id="2384" chance="25" /><!-- weapon-classe -->
+		<item id="2394" chance="250" /><!-- weapon-classe -->	
+		<item id="2072" chance="25" /><!-- weapon-classe -->
+		<item id="12495" chance="910" /><!-- Goblin Ear Gingerbreadman --> 
+		<item id="6501" chance="910" /><!-- Goblin Ear Gingerbreadman --> 
+		<item id="26410" chance="100" /><!-- goblin helmet -->		
+		<item id="26411" chance="100" /><!-- goblin armor -->		
+		<item id="26412" chance="100" /><!-- goblin legs -->		
+		<item id="26413" chance="100" /><!-- goblin boots -->		
+		<item id="5910" countmax="2" chance="200" /><!-- green piece of cloth -->				
+	</loot>
+</monster>

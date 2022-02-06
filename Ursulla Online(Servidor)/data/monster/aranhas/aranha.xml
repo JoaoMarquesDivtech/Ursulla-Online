@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="aranha" nameDescription="a aranha" race="venom" experience="30" speed="195" manacost="210">
+	<health now="60" max="60" />
+	<look type="30" corpse="5961" />
+	<targetchange interval="4000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="6" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="15" attack="27" />
+	</attacks>
+	<defenses armor="5" defense="5" />
+	<elements>
+	    <element firePercent="-50" />
+		<element icePercent="-30" />
+		<element earthPercent="50" />
+	</elements>
+	<loot>
+		<item id="8859" chance="810" /><!-- spider fangs -->
+	</loot>
+</monster>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mama" nameDescription="um humano" race="blood" experience="1000" speed="225" manacost="290">
+	<health now="500" max="500" />
+	<look type="136" head="79" body="114" legs="77" feet="114" corpse="20562" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="20" attack="20" />
+		<attack name="physical" interval="2000" chance="6" range="7" min="120" max="-130">
+			<attribute key="shootEffect" value="throwingstar" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element energyPercent="20" />
+		<element holyPercent="1" />
+		<element earthPercent="-12" />
+		<element deathPercent="-10" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Vou catar tudo que é seu!" />
+	</voices>
+	<loot>
+		<item id="2667" chance="12750" /><!-- fish -->
+		<item id="5913" chance="2478" /><!-- brown piece of cloth -->
+		<item id="2467" chance="500" /><!-- brass legs -->
+		<item id="2465" chance="500" /><!-- brass armor -->
+		<item id="26393" chance="100000" /><!-- mathias amulet -->
+		<item id="2465" chance="500" /><!-- brass helmet -->
+		<item id="2235" chance="500" /><!-- moldy cheese -->
+		<item id="1294" countmax="3" chance="15290" /><!-- small stone -->
+		<item id="2173" chance="2000" /><!-- aol -->	
+		<item id="26552" chance="2000" /><!-- chave de bronze -->			
+	</loot>
+</monster>

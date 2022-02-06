@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="gigante pedreiro" nameDescription="a gigante" race="blood" experience="1300" speed="305" manacost="525">
+	<health now="1325" max="1325" />
+	<look type="919" corpse="7847" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="67" attack="40" />
+		<attack name="physical" interval="2000" chance="35" range="7" min="0" max="-220">
+			<attribute key="shootEffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20" />
+	<elements>
+		<element energyPercent="10" />
+		<element icePercent="20" />
+		<element holyPercent="1" />
+		<element earthPercent="-10" />
+		<element deathPercent="-5" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="MINHA PEDRA VAI TE DERRUBARRR" />
+	</voices>
+	<loot>
+		<item id="2666" countmax="2" chance="50430" /><!-- meat -->
+		<item id="2406" chance="8000" /><!-- short sword -->
+		<item id="2510" chance="800" /><!-- plate shield -->
+		<item id="2463" chance="800" /><!-- plate armor -->
+		<item id="2647" chance="800" /><!-- plate legs -->
+		<item id="2490" chance="800" /><!-- dark helmet -->		
+		<item id="2525" chance="800" /><!-- dwarven shield -->		
+		<item id="2513" chance="1600" /><!-- battle shield -->
+		<item id="2381" chance="680" /><!-- halberd -->
+		<item id="7398" chance="120" /><!-- cyclops trophy -->
+		<item id="7588" chance="520" /><!-- strong health potion -->
+		<item id="7398" chance="80" countmax="5" /><!-- cyclops trophy -->		
+		<item id="2209" chance="90" /><!-- club ring -->
+	</loot>
+</monster>

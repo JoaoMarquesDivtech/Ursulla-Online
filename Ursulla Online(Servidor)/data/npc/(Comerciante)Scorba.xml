@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Scorba" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="268" head="114" body="114" legs="43" feet="0" addons="1" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu vendo todo o tipo de armas... diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_buyable" value="wooden shield,2512,10;
+		brass shield,2511,15;
+		plate shield,2510,35;
+		steel shield,2509,75;
+		batle shield,2513,150;
+		dwarven shield,2525,300;"/>
+		<parameter key="shop_sellable" value="wooden shield,2512,5;
+		brass shield,2511,7;
+		plate shield,2510,16;
+		steel shield,2509,36;
+		batle shield,2513,75;
+		dwarven shield,2525,120;
+		guardian shield,2515,150;"/>
+	   </parameters>
+</npc>

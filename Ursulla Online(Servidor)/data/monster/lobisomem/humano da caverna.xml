@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="humano da caverna" nameDescription="a humano" race="blood" experience="75" speed="115" manacost="290">
+	<health now="120" max="120" />
+	<look type="153" head="39" body="0" legs="0" feet="114" addons="1" corpse="20351" />
+	<targetchange interval="5000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="15" />
+	</flags>
+	<attacks>
+		<attack name="physical" interval="2000" chance="70" range="7" min="0" max="-75">
+			<attribute key="shootEffect" value="arrow" />
+		</attack>
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<voices interval="2000" chance="7">
+		<voice sentence="grr!" />
+	</voices>
+	<loot>
+		<item id="2148" countmax="22" chance="50320" /><!-- gold coin -->
+		<item id="2667" chance="12750" /><!-- fish -->
+		<item id="5913" chance="2478" /><!-- brown piece of cloth -->
+		<item id="2467" chance="500" /><!-- brass legs -->
+		<item id="2544" countmax="5" chance="2000" /><!-- arrow -->
+		<item id="1294" countmax="3" chance="15290" /><!-- small stone -->
+		<item id="5909" countmax="2" chance="5290" /><!-- white piece of cloth -->
+	</loot>
+	<script>
+    <event name="transmorfo"/>
+    </script>
+</monster>

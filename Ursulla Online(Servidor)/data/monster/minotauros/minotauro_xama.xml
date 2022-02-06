@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="minotauro xamã" nameDescription="a minotauro nobre" race="blood" experience="550" speed="198" manacost="0">
+	<health now="500" max="500" />
+	<look type="613" corpse="23470" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="4" />
+		<flag staticattack="90" />
+		<flag runonhealth="200" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="50" />
+		<attack name="lifedrain" interval="2000" chance="24" range="4" target="1" min="-25" max="-65">
+			<attribute key="shootEffect" value="smallstone" />
+		</attack>
+		<attack name="energy" interval="2000" chance="16" range="4" min="-20" max="-35">
+			<attribute key="shootEffect" value="smallearth" />
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="death" interval="2000" chance="10" range="5" target="1" radius="3" min="-14" max="-70">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="earth" interval="2000" chance="13" range="5" target="1" radius="4" min="-49" max="-105">
+			<attribute key="shootEffect" value="smallearth" />
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" length="8" spread="0" min="-80" max="-125">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="healing" interval="2000" chance="8" min="25" max="50">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element energyPercent="25" />
+		<element icePercent="5" />
+	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+	</immunities>
+	<voices interval="2000" chance="5">
+		<voice sentence="Hurr!" />
+		<voice sentence="Grr!" />
+	</voices>
+	<loot>
+		<item id="23573" countmax="1" chance="15030" />		<!-- mooh'tah shell -->
+		<item id="7589" countmax="1" chance="7110" />		<!-- strong mana potion -->
+		<item id="7588" countmax="1" chance="6390" />		<!-- strong health potion -->
+		<item id="5878" countmax="1" chance="5530" />		<!-- minotaur leather -->
+		<item id="2147" countmax="1" chance="5470" />		<!-- small ruby -->
+		<item id="2149" countmax="1" chance="5280" />		<!-- small emerald -->
+		<item id="2150" countmax="1" chance="5200" />		<!-- small amethyst -->
+		<item id="9970" countmax="1" chance="4760" />		<!-- small topaz -->
+		<item id="12428" countmax="2" chance="4710" />		<!-- minotaur horn -->
+		<item id="23537" chance="170" />					<!-- mooh'tah plate -->
+		<item id="2477" chance="710" />						<!-- knight legs -->
+		<item id="5911" countmax="1" chance="650" />			<!-- red piece of cloth -->
+		<item id="2476" chance="490" />						<!-- knight armor -->
+		<item id="7401" chance="150" />						<!-- minotaur trophy -->
+		<item id="2186" chance="100" />						<!-- Moonlight Rod  -->
+		<item id="2438" chance="100" />						<!-- Epee  -->
+		<item id="2387" chance="100" />						<!-- Double Axe  -->
+		<item id="2395" chance="100" />						<!-- Fiel Sword  -->
+		<item id="2435" chance="100" />						<!-- Ceifin axe  -->
+		<item id="2423" chance="100" />						<!-- Clerical mace  -->
+		<item id="7404" chance="100" />						<!-- Ladin Dagger  -->
+		<item id="8851" chance="100" />						<!-- Royal Crossbow  -->
+		<item id="8856" chance="100" />						<!-- Yol's bow  -->
+		<item id="2075" chance="100" />						<!-- simple fanfare -->
+		<item id="26383" chance="300" /><!-- pedra da alma(I) -->
+		<item id="26383" chance="100" /><!-- pedra da alma(II) -->
+		<item id="26384" chance="40" /><!-- pedra da alma(III) -->			
+		<item id="5809" chance="2" /><!-- soul stone -->
+	</loot>
+</monster>

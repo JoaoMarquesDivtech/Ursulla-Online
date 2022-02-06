@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="aranha venenosa" nameDescription="a aranha" race="venom" experience="62" speed="225" manacost="270">
+	<health now="120" max="120" />
+	<look type="36" corpse="5974" />
+	<targetchange interval="4000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="6" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-10" max="-50" poison="30" />
+	</attacks>
+	<defenses armor="7" defense="7" />
+	<elements>
+	    <element firePercent="-50" />
+		<element icePercent="-30" />
+		<element earthPercent="50" />
+	</elements>
+	<loot>
+		<item id="12441" chance="1140" /><!-- poison spider shell -->
+	</loot>
+</monster>

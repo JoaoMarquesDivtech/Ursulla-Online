@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	
+	<quest name="Tutorial" startstorageid="20000" startstoragevalue="-1">
+		<mission name="Tutorial: A corrida pela Sub-Classe" storageid="20000" startvalue="-1" endvalue="14">
+			<missionstate id="-1" description="Fale com o bron." />
+			<missionstate id="0" description="Fale com o alex." />
+			<missionstate id="1" description="Procure o raphael" />	
+			<missionstate id="2" description="Procure o dorbin!" />		
+			<missionstate id="3" description="Procure o padre manoel." />	
+			<missionstate id="4" description="De o livro para o padre manoel." />	
+			<missionstate id="5" description="Fale com a renata!" />	
+			<missionstate id="6" description="Entre na dungeon!" />		
+			<missionstate id="7" description="Entre pela primeira vez na dungeon!" />	
+			<missionstate id="8" description="Procure e fale com o jonas!" />
+			<missionstate id="9" description="Vá a loja de porções e fale com o Gusta" />
+			<missionstate id="10" description="Fale com o Manoel." />	
+			<missionstate id="11" description="Vá falar com o Jason!" />		
+			<missionstate id="12" description="Leve uma Pedra da alma(I) para o Jason" />	
+			<missionstate id="13" description="Procure e fale com o  Jack!" />
+			<missionstate id="14" description="Procure as pistas da sua classe!" />			
+			<missionstate id="15" description="Você concluiu o tutorial! Boa sorte na sua jornada!" />			
+		</mission>		
+	</quest>
+	
+	<quest name="Tutorial" startstorageid="20001" startstoragevalue="-1">
+		<mission name="Tutorial: A corrida pela Sub-Classe" storageid="20001" startvalue="-1" endvalue="11">
+			<missionstate id="-1" description="Fale com o harry." />
+			<missionstate id="0" description="Fale com o Gborn." />
+			<missionstate id="1" description="Procure o brint e fale com ele!" />	
+			<missionstate id="2" description="Procure o mergan e fale com ele!" />		
+			<missionstate id="3" description="Procure o tony e fale com ele!" />	
+			<missionstate id="4" description="Mate 10 texugos e entrege a pele para o tony." />	
+			<missionstate id="5" description="Procure e fale com o sabrini!" />	
+			<missionstate id="6" description="Procure e fale com o bill!" />		
+			<missionstate id="7" description="Procure e fale com o mago Paul!!" />	
+			<missionstate id="8" description="Entregue uma moeda de prata para o Paul!" />
+			<missionstate id="9" description="Procure e fale com o Cris" />
+			<missionstate id="10" description="Procure o representante da sua classe." />		
+			<missionstate id="11" description="Você terminou o tutorial, boa sorte na sua jornada!" />			
+		</mission>		
+	</quest>
+	
+</quests>

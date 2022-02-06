@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<npc name="Muca" script="default.lua" walkinterval="2000" floorchange="0">
+	<health now="100" max="100" />
+	<look type="132" head="114" body="0" legs="42" feet="59" addons="2" />
+<voices>
+<voice text="Support your local weapon dealer!" interval2="100" margin="1" yell="no" />
+</voices>
+<parameters>
+<parameter key="module_keywords" value="1" />
+		<parameter key="keywords" value="wares;" />
+		<parameter key="keyword_reply1" value="Ola! Eu compro produto de monstros, voce tem algo ai? diga {trade}!" />
+   		<parameter key="message_greet" value="Oi |PLAYERNAME|. Venha ver minhas ofertas amigo! diga {trade}!." />
+		<parameter key="message_farewell" value="Tchau |PLAYERNAME|." />
+		<parameter key="message_walkaway" value="However." />
+		<parameter key="module_shop" value="1" />
+		<parameter key="shop_sellable" value="cookie,2687,1;
+		cyclops toe,10574,20;
+		cyclops trophy,7398,100;
+		honeycomb,5902,12;
+		cherry,2679,4;
+		witch hat,10570,70;
+		stuffed toad,11211,200;
+		star herb,2800,7;
+		witch broom,10569,35;
+		bear paw,5896,25;
+		wolf paw,5897,25;
+		antlers,11214,25;
+		tarantula egg,11198,22;
+		spider fangs,11198,14;
+		poison spider shell,12441,4;
+		wool,11236,5;
+		dragon tail,12413,19;
+		green dragon scale,5920,30;
+		dragon claw,5919,10000;
+		red dragon scale,5882,50;
+		green dragon leather,5877,40;
+		red dragon leather,5948,70;
+		black wool,12404,19;
+		brown piece of cloth,5913,50;
+		white piece of cloth,5910,50;
+		werewolf fur,11234,700;
+		werewolf fang,24708,500;
+		broken shamanic staff,12408,35;
+		shamanic hood,12434,25;
+		orc leather,12435,30;
+		orc tooth,11113,27;
+		skull belt,12436,15;
+		sniper glober,5875,50;
+		deer tophy,7397,150;
+		wolf tophy,7394,150;
+		hunter quiver,12425,25;
+		broken helmet,12409,17;"/>
+	</parameters>
+</npc>

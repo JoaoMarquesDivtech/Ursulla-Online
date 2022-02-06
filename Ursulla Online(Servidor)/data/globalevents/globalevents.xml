@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalevents>
+<globalevent name="text" interval="4550" script="text.lua"/> 
+
+<!-- CONFIGURAR COM 3 HORAS A MENOS SEMPRE -->
+<globalevent name="shopguild" interval="30000" script="others/shopguild.lua"/>
+<globalevent type="startup" name="doCheckHouses" script="others/doCheckHouses.lua" />
+<globalevent interval="6000000" name="AutoSave" script="autosave.lua"/>
+<globalevent name="autoBroadcast" interval="900000" script="autobroadcast.lua"/>
+
+
+
+
+
+
+	<!-- Others -->
+	<globalevent type="startup" name="ServerStartup" script="startup.lua" />
+  
+	<globalevent type="record" name="PlayerRecord" script="record.lua" />
+  
+	<globalevent name="ServerSave" time="04:55:00" script="serversave.lua" />
+  
+	<globalevent name="Shop" interval="30000" script="others/shop.lua"/>  <!-- SHOP DO SITE DESATIVADO -->
+
+</globalevents>

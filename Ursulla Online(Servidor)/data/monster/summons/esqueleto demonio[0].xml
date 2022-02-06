@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="esqueleto demonio[0]" nameDescription="um esqueleto" race="undead" experience="35" speed="250" manacost="300">
+	<health now="10" max="10"/>
+	<look type="37" />
+	<targetchange interval="4000" chance="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-20" max="-35" />
+		<attack name="lifedrain" interval="2000" chance="25" range="1" min="-30" max="-40" />
+	</attacks>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element holyPercent="-5" />
+	</elements>
+	<immunities>
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+	</immunities>
+</monster>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="minotauro executor" nameDescription="a minotauro" race="blood" experience="465" speed="410" manacost="550">
+	<health now="185" max="185" />
+	<look type="609" corpse="5983" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="1000" min="-200" max="-410" />
+	</attacks>
+	<defenses armor="20" defense="20" />
+	<defense name="invisible" interval="2000" chance="5" duration="3000">
+			<attribute key="areaEffect" value="blueshimmer" />
+	</defense>
+	<elements>
+		<element firePercent="20" />
+		<element holyPercent="10" />
+		<element icePercent="-10" />
+		<element deathPercent="-10" />
+	</elements>
+	<voices interval="2000" chance="7">
+		<voice sentence="Kirll Karrrl!" />
+		<voice sentence="Kaplar!" />
+	</voices>
+	<loot>
+		<item id="12428" countmax="2" chance="8330" />	<!-- minotaur horn -->
+		<item id="12438" chance="5040" />				<!-- piece of warrior armor -->
+		<item id="2465" chance="4390" />					<!-- brass armor -->
+		<item id="2464" chance="3000" />					<!-- chain armor -->
+		<item id="2513" chance="2000" />					<!-- battle shield -->
+		<item id="5878" chance="1000" />					<!-- minotaur leather -->
+		<item id="2580" chance="480" />					<!-- fishing rod -->
+		<item id="2387" chance="400" />					<!-- double axe -->
+		<item id="7618" chance="370" />					<!-- health potion -->
+		<item id="7401" chance="90" />					<!-- minotaur trophy -->
+		<item id="26383" chance="100" /><!-- pedra da alma(II) -->
+		<item id="26384" chance="40" /><!-- pedra da alma(III) -->	
+		<item id="2186" chance="100" />						<!-- Moonlight Rod  -->
+		<item id="2438" chance="100" />						<!-- Epee  -->
+		<item id="2387" chance="100" />						<!-- Double Axe  -->
+		<item id="2395" chance="100" />						<!-- Fiel Sword  -->
+		<item id="2435" chance="100" />						<!-- Ceifin axe  -->
+		<item id="2423" chance="100" />						<!-- Clerical mace  -->
+		<item id="7404" chance="100" />						<!-- Ladin Dagger  -->
+		<item id="8851" chance="100" />						<!-- Royal Crossbow  -->
+		<item id="8856" chance="100" />						<!-- Yol's bow  -->
+		<item id="2411" chance="100" />						<!-- Poison Dagger  -->
+		<item id="2075" chance="100" />						<!-- simple fanfare -->		
+	</loot>
+</monster>
