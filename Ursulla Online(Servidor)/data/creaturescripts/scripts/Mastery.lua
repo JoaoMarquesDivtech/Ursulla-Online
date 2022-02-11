@@ -23,15 +23,15 @@ local function onMastery(cid ,storage1, storage2, storage3, tipo)
     cid:setStorageValue(storage1, experiencia + 1)
 
     local experiencia, experiencia1 = cid:getStorageValue(storage1), cid:getStorageValue(storage2)
-    cid:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Experiencia em "..tipo.." ("..experiencia.."/"..experiencia1..")")
+    cid:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Experiencia em "..tipo.." ("..experiencia.."/"..experiencia1..")")
 
     if(experiencia == experiencia1 or experiencia >= experiencia1)  then
         cid:setStorageValue(storage1, 0)
         cid:setStorageValue(storage2, experiencia1 + 150)
         cid:setStorageValue(storage3, nivel + 1)
 
-        cid:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você aumentou de nivel na mastery em "..tipo.." para o nivel:"..nivel..".")
-        cid:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Você aumentou de nivel na mastery em "..tipo.." para o nivel:"..nivel..".")
+        cid:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ aumentou de nivel na mastery em "..tipo.." para o nivel:"..nivel..".")
+        cid:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Vocï¿½ aumentou de nivel na mastery em "..tipo.." para o nivel:"..nivel..".")
     end
 
 end
