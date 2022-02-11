@@ -2,40 +2,28 @@
 <creaturescripts>
 
 
-
+	<event type="healthchange" name="HealthChange" script="HealthChange.lua"/>
+	<event type="healthchange" name="Mastery" script="Mastery.lua"/>
     <event type="extendedopcode" name="GameSpells" script="gamespells.lua" />
-    <event type="preparedeath" name="BFPrepareDeath" script="battlefield.lua" />
-	<event type="healthchange" name="BFHealthChange" script="battlefield.lua" />
-	<event type="manachange" name="BFManaChange" script="battlefield.lua" />
 	<event type="logout" name="BFLogout" script="battlefield.lua" />
-
-<event type="preparedeath" name="CTFDeath" script="ctf.lua" />
-<event type="healthchange" name="CTFHealthChange" script="ctf.lua" />
-
- <event type="death" name="DeathCounter" script="kdcounter.lua" />
-<event type="kill" name="KillCounter" script="kdcounter.lua" />
-
+	<event type="preparedeath" name="CTFDeath" script="ctf.lua" />
+	<event type="death" name="DeathCounter" script="kdcounter.lua" />
+	<event type="kill" name="KillCounter" script="kdcounter.lua" />
 	<event type="extendedopcode" name="Attributes" script="attributes.lua" />
 	<event type="advance" name="SkillPointSystem" script="attributes.lua"/>
-	<!-- Others -->
-  <event type="login" name="bless1" script="freeblesslowlevel.lua"/>
+  	<event type="login" name="bless1" script="freeblesslowlevel.lua"/>
 	<event type="login" name="PlayerLogin" script="others/login.lua" />
 	<event type="login" name="FirstItems" script="others/firstitems.lua" />
 	<event type="login" name="RegenerateStamina" script="others/regeneratestamina.lua" />
 	<event type="login" name="OfflineTraining" script="others/offlinetraining.lua" />
     <event type="login" name="AddonsMounts" script="others/addons-montarias.lua"/>
 	<event type="logout" name="PlayerLogout" script="others/logout.lua" />
-
 	<event type="death" name="PlayerDeath" script="others/playerdeath.lua" />
 	<event type="death" name="DropLoot" script="others/droploot.lua" />
 	<event type="advance" name="AdvanceSave" script="others/advance_save.lua" />
-	
 	<event type="death" name="boss1" script="chefoes/chefao[1].lua"/>
 	<event type="death" name="transmorfo" script="monstros/transmorfo.lua"/>
-	
 	<event type="manachange" name="DodgeMana" script="manadodge.lua"/>
-	<event type="healthchange" name="DodgeCritical" script="criticaldodge.lua"/>
-	<event type="healthchange" name="Defesa" script="defesa.lua"/>
     <event type="login" name="IconMap" script="mapmark.lua"/>	
 	<event type="extendedopcode" name="ClientVersion" script="version.lua" />
 	

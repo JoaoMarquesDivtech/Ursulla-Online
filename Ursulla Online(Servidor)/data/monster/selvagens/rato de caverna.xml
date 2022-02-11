@@ -32,4 +32,7 @@
 		<item id="2696" chance="30000" /><!-- cheese -->
 		<item id="2687" chance="750" /><!-- cookie -->
 	</loot>
+	<script>
+    	<event name="Mastery"/>
+    </script>
 </monster>

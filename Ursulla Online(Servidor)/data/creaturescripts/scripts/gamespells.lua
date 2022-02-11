@@ -44,11 +44,9 @@ end
 function onExtendedOpcode(player, opcode, buffer)
     if opcode == opcodeNumber then
         if buffer == "getPlayerLevel" then
-		    print("Entrou no retorno de level")
             sendPlayerLevel(player)
         elseif buffer == "getSpells" then
             sendSpells(player)
-			print("Entrou no retorno de spells")
         end
     end
 end

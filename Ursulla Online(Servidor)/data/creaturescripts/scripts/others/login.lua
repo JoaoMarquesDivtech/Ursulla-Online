@@ -166,17 +166,19 @@ function onLogin(player)
     end
      
    
-    player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'Bem vindo ao mundo de MMORPG-Ursulla Online!')
+    player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, 'Bem vindo ao mundo de MMORPG-Ursulla Online!!')
 	
-	-- Defesa
-	player:registerEvent("Defesa")
+
+
+
 	
 	if player:getStorageValue(50006) == -1 then
 	player:setStorageValue(50006, 0)
 	end
 	
     --Geral
-	player:registerEvent("DodgeCritical")
+	player:registerEvent("HealthChange")
+	player:registerEvent("Mastery")
     player:registerEvent("DodgeMana")
     player:registerEvent("IconMap")		
     player:registerEvent("Combat")

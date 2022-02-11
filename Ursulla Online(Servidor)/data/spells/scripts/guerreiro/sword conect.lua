@@ -26,8 +26,8 @@ combat:setParameter(COMBAT_PARAM_BLOCKARMOR, true)
 combat:setParameter(COMBAT_PARAM_USECHARGES, true)
 
 function onGetFormulaValues(player, skill, attack, factor)
-    local força = player:getStorageValue(50001)
-	local min = ((player:getLevel() / 5) + (skill * attack * 0.02)  + (força * 2.5))*0.25
+    local forca = player:getStorageValue(50001)
+	local min = ((player:getLevel() / 5) + (skill * attack * 0.02)  + (forca * 2.5))*0.25
     return -min, -min
 end
 
@@ -38,8 +38,8 @@ combat2:setParameter(COMBAT_PARAM_TYPE, COMBAT_HEALING)
 combat2:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_HITAREA)
 
 function onGetFormulaValues(player, skill, attack, factor)
-    local força = player:getStorageValue(50001)
-	local min = ((player:getLevel() / 5) + (skill * attack * 0.02)  + (força * 2))*0.2
+    local forca = player:getStorageValue(50001)
+	local min = ((player:getLevel() / 5) + (skill * attack * 0.02)  + (forca * 2))*0.2
     return min, min
 end
 

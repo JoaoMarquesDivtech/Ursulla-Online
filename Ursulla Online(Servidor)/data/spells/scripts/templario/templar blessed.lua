@@ -4,8 +4,8 @@ combat:setParameter(COMBAT_PARAM_EFFECT, 40)
 combat:setParameter(COMBAT_PARAM_USECHARGES, true)
 
 function onGetFormulaValues(player, skill, attack, factor)
-    local força = player:getStorageValue(50001)
-	local min = ((player:getLevel() / 5) + ((skill + attack) * 0.5)  + (força))*0.4
+    local forca = player:getStorageValue(50001)
+	local min = ((player:getLevel() / 5) + ((skill + attack) * 0.5)  + (forca))*0.4
     return -min, -min
 end
 

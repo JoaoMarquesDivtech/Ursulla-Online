@@ -21,8 +21,6 @@ dofile('data/lib/lionrock.lua')
 
 dofile('data/lib/dogdecritical.lua')
 
-dofile('data/lib/raca.lua')
-
 dofile('data/lib/attrextra.lua')
 
 dofile('data/lib/profission.lua')

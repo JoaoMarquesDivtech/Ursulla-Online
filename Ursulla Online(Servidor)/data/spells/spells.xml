@@ -4,7 +4,7 @@
     <!-- Runas --> 
 	<!--Conjurar-->
 	<instant group="support" spellid="0" name="Rune conjure" words="Rune conjure" lvl="20" mana="100" soul="3" prem="0" aggressive="0" selftarget="1" cooldown="2000" groupcooldown="2000" needlearn="1" script="runas/rune conjure.lua">
-	<vocation name="Mago" />
+
 	</instant>	
 	<!--RUNAS(FOGO)-->
 	<rune group="attack" spellid="200" name="Fire rune(I)" id="26415" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(I).lua" />	
@@ -47,61 +47,61 @@
 	
 	<!-- Guerreiro -->
 	<instant group="attack" spellid="0" name="Warrior Strike" words="Warrior Strike" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="guerreiro/warrior strike.lua">
-	<vocation name="Guerreiro" />
+
 	</instant>
 	<!-- Defensor -->
 	<instant group="attack" spellid="20" name="Defensive Strike" words="Defensive Strike" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="guardiao/defensive strike.lua">
-	<vocation name="Guardiao" />
+
 	</instant>
     <!-- Arqueiro -->
 	<instant group="attack" spellid="40" name="Arc Strike" words="Arc Strike" lvl="1" mana="5" range="6" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="arqueiro/arc strike.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>	
 	<instant group="support" spellid="41" name="Arc Conjure" words="Arc Conjure" lvl="1" mana="5" soul="1" prem="0" aggressive="0" selftarget="1" cooldown="500" groupcooldown="500" needlearn="0" script="arqueiro/arc conjure.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>
 	<instant group="attack" spellid="42" name="Arc Multistrike" words="Arc Multistrike" lvl="20" mana="15"  range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc multistrike.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>
 	<instant group="attack" spellid="43" name="Arc Wave" words="Arc Wave" lvl="40" mana="30" direction="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc wave.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>	
 	<instant group="attack" spellid="44" name="Arc Gran Strike" words="Arc Gran Strike" lvl="40" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc gran strike.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>
 	<instant group="attack" spellid="45" name="Arc Fly" words="Arc Fly" lvl="50" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc fly.lua">
-	<vocation name="Arqueiro" />
+
 	</instant>		
 	<!-- Atirador -->
 	<instant group="attack" spellid="61" name="Camp Strike" words="Camp Strike" lvl="1" mana="5"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="atirador/camp strike.lua">
-	<vocation name="atirador" />
+
 	</instant>
 	<instant group="attack" spellid="62" name="Camp Conjure" words="Camp Conjure" soul="1" lvl="1" mana="10" selftarget="1" cooldown="500" groupcooldown="500" needlearn="0" script="atirador/camp conjure.lua">
-	<vocation name="atirador" />
+
 	</instant>
 	<instant group="attack" spellid="63" name="Camp Combo" words="Camp Combo" lvl="20" mana="15"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp combo.lua">
-	<vocation name="atirador" />
+
 	</instant>
 	<instant group="attack" spellid="64" name="Camp Allowed" words="Camp Allowed" lvl="30" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp allowed.lua">
-	<vocation name="atirador" />
+
 	</instant>
 	<instant group="attack" spellid="65" name="Camp Gran Strike" words="Camp Gran Strike" lvl="40" mana="25"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp gran strike.lua">
-	<vocation name="atirador" />
+
 	</instant>		
 	<instant group="attack" spellid="66" name="Camp Multiples" words="Camp Multiples" lvl="50" mana="30"  range="5" selftarget="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp multiples.lua">
-	<vocation name="atirador" />
+
 	</instant>			
     <!-- Mago -->
 	<instant group="attack" spellid="80" name="Energy Strike" words="Energy Strike" lvl="1" mana="10" range="5" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="mago/energy strike.lua">
-	<vocation name="mago" />
+
 	</instant>	
 	<!-- Ladrão -->
 	<instant group="attack" spellid="160" name="Assassin knife" words="Assassin knife" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="assassino/thief strike.lua">
-	<vocation name="assassino" />
+
 	</instant>	
     <!-- Poeta -->
  	<instant group="attack" spellid="180" name="Song Strike" words="Song Strike" lvl="1" mana="10" range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="bardo/song strike.lua">
-	    <vocation name="bardo" />
+
 	</instant>
 
 

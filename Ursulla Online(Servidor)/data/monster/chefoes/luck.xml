@@ -51,6 +51,6 @@
 		<item id="2110" chance="490" />					<!-- doll -->
 	</loot>
 	<script>
-    <event name="boss1"/>
+    <event name="Mastery"/>
     </script>
 </monster>

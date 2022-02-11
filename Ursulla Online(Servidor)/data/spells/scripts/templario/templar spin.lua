@@ -5,8 +5,8 @@ combat:setParameter(COMBAT_PARAM_USECHARGES, true)
 combat:setArea(createCombatArea(AREA_SQUARE1X1))
 
 function onGetFormulaValues(player, skill, attack, factor)
-    local força = player:getStorageValue(50001)
-	local min = (player:getLevel() / 5) + ((skill + attack) * 0.5) + (força*1.5)
+    local forca = player:getStorageValue(50001)
+	local min = (player:getLevel() / 5) + ((skill + attack) * 0.5) + (forca*1.5)
     return -min, -min
 end
 
