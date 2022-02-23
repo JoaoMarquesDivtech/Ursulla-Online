@@ -7,7 +7,6 @@
     <event type="extendedopcode" name="GameSpells" script="gamespells.lua" />
 	<event type="logout" name="BFLogout" script="battlefield.lua" />
 	<event type="preparedeath" name="CTFDeath" script="ctf.lua" />
-	<event type="death" name="DeathCounter" script="kdcounter.lua" />
 	<event type="kill" name="KillCounter" script="kdcounter.lua" />
 	<event type="extendedopcode" name="Attributes" script="attributes.lua" />
 	<event type="advance" name="SkillPointSystem" script="attributes.lua"/>

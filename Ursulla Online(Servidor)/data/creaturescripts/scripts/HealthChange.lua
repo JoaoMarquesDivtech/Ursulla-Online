@@ -30,7 +30,6 @@ function onHealthChange(creature, attacker, primaryDamage, primaryType, secondar
 
     if primaryDamage <= (DEFESA(creature)*0.85) then 
 		primaryDamage = 0
-        print("Defendi2")
 		creature:say("Block!", TALKTYPE_MONSTER_SAY)
 		return primaryDamage, primaryType, secondaryDamage, secondaryType
 	end

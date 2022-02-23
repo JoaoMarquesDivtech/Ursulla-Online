@@ -15153,7 +15153,7 @@
 		<attribute key="showcount" value="0" />
 	</item>
 	<item id="8300" article="a" name="talent crystal">
-	    <attribute key="description" value="(+1) Ponto de distribuição" />
+	    <attribute key="description" value="(+1) Ponto de distribuiï¿½ï¿½o" />
 		<attribute key="weight" value="250" />
 	</item>
 	<item id="8301" name="holy soil">
@@ -15693,7 +15693,7 @@
 	<item id="8843" article="an" name="onion">
 		<attribute key="weight" value="140" />
 	</item>
-	<item id="8844" name="jalapeño pepper" article="a">
+	<item id="8844" name="jalapeï¿½o pepper" article="a">
 		<attribute key="weight" value="30" />
 	</item>
 	<item id="8845" article="a" name="beetroot">
@@ -16472,9 +16472,9 @@
 		<attribute key="description" value="It is given to the winners of competitions." />
 		<attribute key="weight" value="1000" />
 	</item>
-	<item id="8983" article="a" name="heavily bound book">
-		<attribute key="description" value="It contains the scribings of many knowledgeable." />
-		<attribute key="weight" value="7800" />
+	<item id="8983" article="a" name="Livro de Magia">
+		<attribute key="showattributes" value="0" />
+		<attribute key="weight" value="100" />
 	</item>
 	<item id="8984" article="an" name="abacus">
 		<attribute key="weight" value="1200" />
@@ -17727,7 +17727,7 @@
 		<attribute key="description" value="This one would be quite healthy if it wasn't for all the melted cheese on top." />
 		<attribute key="weight" value="1100" />
 	</item>
-	<item id="9998" article="a" name="filled jalapeño peppers">
+	<item id="9998" article="a" name="filled jalapeï¿½o peppers">
 		<attribute key="description" value="The creamy cheese makes a great combination with the spicy peppers." />
 		<attribute key="weight" value="650" />
 	</item>
@@ -28952,12 +28952,11 @@
 		<attribute key="weight" value="10" />
 		<attribute key="description" value="A torn piece of parchment, showing part of an arcane incantation rite." />
 	</item>
-	<item id="21251" article="an" name="incantation scroll">
+	<item id="21251" article="an" name="Pergaminho de Magia">
 		<attribute key="weight" value="10" />
 		<attribute key="description" value="A scroll of parchment, inscribed with an arcane incantation rite." />
 	</item>
 	<item id="21252" article="a" name="vampire's signet ring">
-		<attribute key="description" value="A ring with a massive, faintly glowing seal, containing the blood of a vampire." />
 		<attribute key="weight" value="10" />
 	</item>
 	<item id="21253" name="the Vampire Count's medal">
@@ -32625,12 +32624,12 @@
 		<attribute key="slotType" value="body" />
 	     </item>
 	     <item id="26404" article="a" name="Gem Amulet">
-		<attribute key="description" value="(+3 força)" />	
+		<attribute key="description" value="(+3 forï¿½a)" />	
 		<attribute key="weight" value="750" />
 		<attribute key="slotType" value="necklace" />
 	     </item>	
 	     <item id="26405" article="a" name="Gem Amulet">
-		<attribute key="description" value="(+3 força)" />	
+		<attribute key="description" value="(+3 forï¿½a)" />	
 		<attribute key="weight" value="750" />
 		<attribute key="slotType" value="necklace" />
 	     </item>			

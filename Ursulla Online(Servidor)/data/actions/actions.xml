@@ -5,7 +5,9 @@
 <action itemid="2554"  script="tools/create.lua" />
 <!-- Pacotes -->
 <action itemid="16101"  script="pacotes/premium scroll.lua" />
-
+<!--Magias -->
+<action itemid="8983" script="magias/livrodemagia.lua" />
+<action itemid="21251" script="magias/pergaminho.lua" />
 <!-- Dungeons -->
 <!-- Diarios -->
 <action actionid="40000" script="dungeon/bau diario/1.lua" /> 
@@ -212,7 +214,6 @@
 	<action actionid="4662" script="quests/gravedigger/scroll.lua" />	
 	<action actionid="4669" script="quests/gravedigger/estante.lua" />
 	<action uniqueid="4663" script="quests/gravedigger/caixa.lua" />
-	<action itemid="21251" script="quests/gravedigger/sacrifici.lua" />
 	<action fromaid="4651" toaid="4653" script="quests/gravedigger/inscriptions.lua" />
 	<action itemid="21446" script="quests/gravedigger/ashes.lua" />
 	<action itemid="21406" script="quests/gravedigger/hallowed.lua" />

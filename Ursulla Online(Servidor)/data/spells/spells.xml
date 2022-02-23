@@ -1,109 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spells>
 
-    <!-- Runas --> 
-	<!--Conjurar-->
-	<instant group="support" spellid="0" name="Rune conjure" words="Rune conjure" lvl="20" mana="100" soul="3" prem="0" aggressive="0" selftarget="1" cooldown="2000" groupcooldown="2000" needlearn="1" script="runas/rune conjure.lua">
 
+
+	<instant group="attack" spellid="40" name="fire ball" words="fire ball" lvl="1" mana="5" range="6" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="fogo/fire ball.lua">
 	</instant>	
-	<!--RUNAS(FOGO)-->
-	<rune group="attack" spellid="200" name="Fire rune(I)" id="26415" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(I).lua" />	
-	<rune group="attack" spellid="201" name="Fire rune(II)" id="26416" needtarget="1" allowfaruse="1" charges="1" lvl="20" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(II).lua" />	
-	<rune group="attack" spellid="202" name="Fire rune(III)" id="26417" needtarget="1" allowfaruse="1" charges="1" lvl="30" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(III).lua" />	
-	<rune group="attack" spellid="203" name="Fire rune(IV)" id="26418" needtarget="1" allowfaruse="1" charges="1" lvl="40" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(IV).lua" />	
-	<rune group="attack" spellid="204" name="Fire rune(V)" id="26419" needtarget="1" allowfaruse="1" charges="1" lvl="50" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/fogo/fire rune(V).lua" />	
-	<!--RUNAS(TREVAS)-->  
-	<rune group="attack" spellid="205" name="Death rune(I)" id="26420" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/trevas/death rune(I).lua" />		
-	<rune group="attack" spellid="206" name="Death rune(II)" id="26421" needtarget="1" allowfaruse="1" charges="1" lvl="20" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/trevas/death rune(II).lua" />		
-	<rune group="attack" spellid="207" name="Death rune(III)" id="26422" needtarget="1" allowfaruse="1" charges="1" lvl="30" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/trevas/death rune(III).lua" />		
-	<rune group="attack" spellid="208" name="Death rune(IV)" id="26423" needtarget="1" allowfaruse="1" charges="1" lvl="40" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/trevas/death rune(IV).lua" />		
-	<rune group="attack" spellid="209" name="Death rune(V)" id="26424" needtarget="1" allowfaruse="1" charges="1" lvl="50" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/trevas/death rune(V).lua" />		
-	<!--RUNAS(RAIO)-->  
-	<rune group="attack" spellid="210" name="Death rune(I)" id="26425" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/raio/thunder rune(I).lua" />		
-	<rune group="attack" spellid="211" name="Death rune(II)" id="26426" needtarget="1" allowfaruse="1" charges="1" lvl="20" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/raio/thunder rune(II).lua" />		
-	<rune group="attack" spellid="212" name="Death rune(III)" id="26427" needtarget="1" allowfaruse="1" charges="1" lvl="30" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/raio/thunder rune(III).lua" />		
-	<rune group="attack" spellid="213" name="Death rune(IV)" id="26428" needtarget="1" allowfaruse="1" charges="1" lvl="40" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/raio/thunder rune(IV).lua" />		
-	<rune group="attack" spellid="214" name="Death rune(V)" id="26429" needtarget="1" allowfaruse="1" charges="1" lvl="50" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/raio/thunder rune(V).lua" />	
-	<!--RUNAS(GELO)-->  
-	<rune group="attack" spellid="215" name="Ice rune(I)" id="26430" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/gelo/ice rune(I).lua" />			
-	<rune group="attack" spellid="216" name="Ice rune(II)" id="26431" needtarget="1" allowfaruse="1" charges="1" lvl="20" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/gelo/ice rune(II).lua" />			
-	<rune group="attack" spellid="217" name="Ice rune(III)" id="26432" needtarget="1" allowfaruse="1" charges="1" lvl="30" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/gelo/ice rune(III).lua" />			
-	<rune group="attack" spellid="218" name="Ice rune(IV)" id="26433" needtarget="1" allowfaruse="1" charges="1" lvl="40" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/gelo/ice rune(IV).lua" />			
-	<rune group="attack" spellid="219" name="Ice rune(V)" id="26434" needtarget="1" allowfaruse="1" charges="1" lvl="50" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/gelo/ice rune(V).lua" />			
-	<!--RUNAS(CURE)--> 
- 	<rune group="attack" spellid="220" name="Cure rune(I)" id="26435" needtarget="1" allowfaruse="1" charges="1" lvl="10" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/cura/cure rune(I).lua" />			
-	<rune group="attack" spellid="221" name="Cure rune(II)" id="26436" needtarget="1" allowfaruse="1" charges="1" lvl="20" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/cura/cure rune(II).lua" />			
-	<rune group="attack" spellid="222" name="Cure rune(III)" id="26437" needtarget="1" allowfaruse="1" charges="1" lvl="30" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/cura/cure rune(III).lua" />			
-	<rune group="attack" spellid="223" name="Cure rune(IV)" id="26438" needtarget="1" allowfaruse="1" charges="1" lvl="40" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/cura/cure rune(IV).lua" />			
-	<rune group="attack" spellid="224" name="Cure rune(V)" id="26439" needtarget="1" allowfaruse="1" charges="1" lvl="50" maglv="1" cooldown="400" groupcooldown="400" blocktype="solid" script="runas/cura/cure rune(V).lua" />		
-	<!--RUNAS(CATALISADOR)-->
-	<rune group="support" spellid="225" name="Prision Rune(I)" id="2293" allowfaruse="1" charges="3" lvl="20" maglv="1" cooldown="2000" groupcooldown="2000" blocktype="all" script="runas/catalisador/prision rune(I).lua" />	
- 	<rune group="support" spellid="226" name="Prision Rune(II)" id="2269" allowfaruse="1" charges="2" lvl="30" maglv="1" cooldown="2000" groupcooldown="2000" blocktype="all" script="runas/catalisador/prision rune(II).lua"/>
 
-	<!-- Cura -->
-	<instant group="healing" spellid="1" name="Cure min" words="cure min" lvl="1" mana="5" agressive="0" cooldown="500" groupcooldown="500" needlearn="1" script="cura/cure min.lua"></instant>
-	<instant group="healing" spellid="1" name="Cure medium" words="cure medium" lvl="40" mana="30" cooldown="500" agressive="0" groupcooldown="500" needlearn="1" script="cura/cure medium.lua"></instant>
-	<instant group="healing" spellid="1" name="Cure Max" words="Cure Max" lvl="40" mana="60" cooldown="500" groupcooldown="500" agressive="0" needlearn="1" script="cura/cure max.lua"></instant>	
-	
-	<!-- Guerreiro -->
-	<instant group="attack" spellid="0" name="Warrior Strike" words="Warrior Strike" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="guerreiro/warrior strike.lua">
-
-	</instant>
-	<!-- Defensor -->
-	<instant group="attack" spellid="20" name="Defensive Strike" words="Defensive Strike" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="guardiao/defensive strike.lua">
-
-	</instant>
-    <!-- Arqueiro -->
-	<instant group="attack" spellid="40" name="Arc Strike" words="Arc Strike" lvl="1" mana="5" range="6" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="arqueiro/arc strike.lua">
-
-	</instant>	
-	<instant group="support" spellid="41" name="Arc Conjure" words="Arc Conjure" lvl="1" mana="5" soul="1" prem="0" aggressive="0" selftarget="1" cooldown="500" groupcooldown="500" needlearn="0" script="arqueiro/arc conjure.lua">
-
-	</instant>
-	<instant group="attack" spellid="42" name="Arc Multistrike" words="Arc Multistrike" lvl="20" mana="15"  range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc multistrike.lua">
-
-	</instant>
-	<instant group="attack" spellid="43" name="Arc Wave" words="Arc Wave" lvl="40" mana="30" direction="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc wave.lua">
-
-	</instant>	
-	<instant group="attack" spellid="44" name="Arc Gran Strike" words="Arc Gran Strike" lvl="40" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc gran strike.lua">
-
-	</instant>
-	<instant group="attack" spellid="45" name="Arc Fly" words="Arc Fly" lvl="50" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="arqueiro/arc fly.lua">
-
-	</instant>		
-	<!-- Atirador -->
-	<instant group="attack" spellid="61" name="Camp Strike" words="Camp Strike" lvl="1" mana="5"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="atirador/camp strike.lua">
-
-	</instant>
-	<instant group="attack" spellid="62" name="Camp Conjure" words="Camp Conjure" soul="1" lvl="1" mana="10" selftarget="1" cooldown="500" groupcooldown="500" needlearn="0" script="atirador/camp conjure.lua">
-
-	</instant>
-	<instant group="attack" spellid="63" name="Camp Combo" words="Camp Combo" lvl="20" mana="15"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp combo.lua">
-
-	</instant>
-	<instant group="attack" spellid="64" name="Camp Allowed" words="Camp Allowed" lvl="30" mana="20"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp allowed.lua">
-
-	</instant>
-	<instant group="attack" spellid="65" name="Camp Gran Strike" words="Camp Gran Strike" lvl="40" mana="25"  range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp gran strike.lua">
-
-	</instant>		
-	<instant group="attack" spellid="66" name="Camp Multiples" words="Camp Multiples" lvl="50" mana="30"  range="5" selftarget="1" cooldown="500" groupcooldown="500" needlearn="1" script="atirador/camp multiples.lua">
-
-	</instant>			
-    <!-- Mago -->
-	<instant group="attack" spellid="80" name="Energy Strike" words="Energy Strike" lvl="1" mana="10" range="5" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="mago/energy strike.lua">
-
-	</instant>	
-	<!-- Ladrão -->
-	<instant group="attack" spellid="160" name="Assassin knife" words="Assassin knife" lvl="1" mana="10" needweapon="1" range="3" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="assassino/thief strike.lua">
-
-	</instant>	
-    <!-- Poeta -->
- 	<instant group="attack" spellid="180" name="Song Strike" words="Song Strike" lvl="1" mana="10" range="4" needtarget="1" blockwalls="1" cooldown="500" groupcooldown="500" needlearn="0" script="bardo/song strike.lua">
-
-	</instant>
 
 
 	
-	</spells>
+</spells>

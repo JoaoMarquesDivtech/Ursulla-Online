@@ -37,6 +37,12 @@ SOUTHEAST = DIRECTION_SOUTHEAST
 NORTHWEST = DIRECTION_NORTHWEST
 NORTHEAST = DIRECTION_NORTHEAST
 
+RACE_VENOM = 1
+RACE_BLOOD = 2
+RACE_UNDEAD = 3
+RACE_FIRE = 4
+RACE_ENERGY = 5
+
 do
 	local function CreatureIndex(self, key)
 		local methods = getmetatable(self)
