@@ -1688,20 +1688,14 @@ bool Item::canDecay() const
 uint32_t Item::getWorth() const
 {
 	switch (id) {
-		case 2148:
+		case ITEM_GOLD_COIN:
 			return count;
 
-		case 2152:
+		case ITEM_PLATINUM_COIN:
 			return count * 100;
 
-		case 2160:
+		case ITEM_CRYSTAL_COIN:
 			return count * 10000;
-			
-		case 26525:
-			return count * 1000000;
-			
-		case 26526:
-			return count * 100000000;		
 
 		default:
 			return 0;

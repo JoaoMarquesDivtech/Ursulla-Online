@@ -1447,18 +1447,18 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 		switch (distance) {
 			case DISTANCE_CLOSE:
 				if (level == LEVEL_SAME) {
-					ss << " is to the ";
+					ss << " esta ao ";
 				} else if (level == LEVEL_HIGHER) {
-					ss << " is on a higher level to the ";
+					ss << " esta niveis acima e ao";
 				} else if (level == LEVEL_LOWER) {
-					ss << " is on a lower level to the ";
+					ss << " esta niveis a baixo e ao";
 				}
 				break;
 			case DISTANCE_FAR:
-				ss << " is far to the ";
+				ss << " longe para ";
 				break;
 			case DISTANCE_VERYFAR:
-				ss << " is very far to the ";
+				ss << " muito longe para ";
 				break;
 			default:
 				break;
@@ -1466,28 +1466,28 @@ bool InstantSpell::SearchPlayer(const InstantSpell*, Creature* creature, const s
 
 		switch (direction) {
 			case DIR_N:
-				ss << "north.";
+				ss << "norte.";
 				break;
 			case DIR_S:
-				ss << "south.";
+				ss << "sul.";
 				break;
 			case DIR_E:
-				ss << "east.";
+				ss << "leste.";
 				break;
 			case DIR_W:
-				ss << "west.";
+				ss << "oeste.";
 				break;
 			case DIR_NE:
-				ss << "north-east.";
+				ss << "nordeste.";
 				break;
 			case DIR_NW:
-				ss << "north-west.";
+				ss << "noroeste.";
 				break;
 			case DIR_SE:
-				ss << "south-east.";
+				ss << "sudeste.";
 				break;
 			case DIR_SW:
-				ss << "south-west.";
+				ss << "sudoeste.";
 				break;
 		}
 	}
@@ -1524,7 +1524,7 @@ bool InstantSpell::SummonMonster(const InstantSpell* spell, Creature* creature, 
 		}
 
 		if (player->getSummonCount() >= 2) {
-			player->sendCancelMessage("You cannot summon more creatures.");
+			player->sendCancelMessage("Voce não pode sumonar criaturas.");
 			g_game.addMagicEffect(player->getPosition(), CONST_ME_POFF);
 			return false;
 		}

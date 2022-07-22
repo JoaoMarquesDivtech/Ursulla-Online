@@ -109,6 +109,9 @@ bool Vocations::loadFromXml()
 		if ((attr = vocationNode.attribute("fromvoc"))) {
 			voc.fromVocation = pugi::cast<uint32_t>(attr.value());
 		}
+		if ((attr = vocationNode.attribute("dualwield"))) {
+			voc.dualWield = attr.as_bool();
+		}
 
 		for (auto childNode : vocationNode.children()) {
 			if (strcasecmp(childNode.name(), "skill") == 0) {

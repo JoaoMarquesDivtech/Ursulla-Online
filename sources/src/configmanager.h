@@ -45,6 +45,7 @@ class ConfigManager
 			ALLOW_WALKTHROUGH,
 			ENABLE_LIVE_CASTING,
 			ALLOW_BLOCK_SPAWN,
+			ALLOW_DUAL_WIELDING,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
@@ -113,6 +114,8 @@ class ConfigManager
 			FREE_DEPOT_LIMIT,
 			PREMIUM_DEPOT_LIMIT,
 			DEPOT_BOXES,
+			DUAL_WIELDING_SPEED_RATE,
+			DUAL_WIELDING_DAMAGE_RATE,
 
 			LAST_INTEGER_CONFIG /* this must be the last one */
 		};

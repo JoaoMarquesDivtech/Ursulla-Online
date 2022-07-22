@@ -50,6 +50,7 @@ uint32_t Player::playerAutoID = 0x10000000;
 Player::Player(ProtocolGame_ptr p) :
 	Creature(), lastPing(OTSYS_TIME()), lastPong(lastPing), inbox(new Inbox(ITEM_INBOX)), client(std::move(p))
 {
+	lastAttackHand = HAND_LEFT;
 	inbox->incrementReferenceCounter();
 }
 
@@ -108,80 +109,80 @@ std::string Player::getDescription(int32_t lookDistance) const
 	std::ostringstream s;
 
 	if (lookDistance == -1) {
-		s << "yourself.";
+		s << "você.";
 
 		if (group->access) {
-			s << " You are " << group->name << '.';
+			s << " Você é " << group->name << '.';
 		} else if (vocation->getId() != VOCATION_NONE) {
-			s << " You are " << vocation->getVocDescription() << '.';
+			s << " Você é " << vocation->getVocDescription() << '.';
 		} else {
-			s << " You have no vocation.";
+			s << " Você não tem classe.";
 		}
 	} else {
 		s << name;
 		if (!group->access) {
-			s << " (Level " << level << ')';
+			s << " (Nivel " << level << ')';
 		}
 		s << '.';
 
 		if (sex == PLAYERSEX_FEMALE) {
-			s << " She";
+			s << " Ela";
 		} else {
-			s << " He";
+			s << " Ele";
 		}
 
 		if (group->access) {
-			s << " is " << group->name << '.';
+			s << " é " << group->name << '.';
 		} else if (vocation->getId() != VOCATION_NONE) {
-			s << " is " << vocation->getVocDescription() << '.';
+			s << " é " << vocation->getVocDescription() << '.';
 		} else {
-			s << " has no vocation.";
+			s << " não tem classe.";
 		}
 	}
 
 	if (party) {
 		if (lookDistance == -1) {
-			s << " Your party has ";
+			s << " Sua party tem ";
 		} else if (sex == PLAYERSEX_FEMALE) {
-			s << " She is in a party with ";
+			s << " Ela está em sua party ";
 		} else {
-			s << " He is in a party with ";
+			s << " Ele está em sua party ";
 		}
 
 		size_t memberCount = party->getMemberCount() + 1;
 		if (memberCount == 1) {
-			s << "1 member and ";
+			s << "1 membro ";
 		} else {
-			s << memberCount << " members and ";
+			s << memberCount << " membros e ";
 		}
 
 		size_t invitationCount = party->getInvitationCount();
 		if (invitationCount == 1) {
-			s << "1 pending invitation.";
+			s << "1 convite de party.";
 		} else {
-			s << invitationCount << " pending invitations.";
+			s << invitationCount << " pedindo convite.";
 		}
 	}
 
 	if (guild && guildRank) {
 		if (lookDistance == -1) {
-			s << " You are ";
+			s << " Você é ";
 		} else if (sex == PLAYERSEX_FEMALE) {
-			s << " She is ";
+			s << " Ela é ";
 		} else {
-			s << " He is ";
+			s << " Ele é ";
 		}
 
-		s << guildRank->name << " of the " << guild->getName();
+		s << guildRank->name << " da " << guild->getName();
 		if (!guildNick.empty()) {
 			s << " (" << guildNick << ')';
 		}
 
 		size_t memberCount = guild->getMemberCount();
 		if (memberCount == 1) {
-			s << ", which has 1 member, " << guild->getMembersOnline().size() << " of them online.";
+			s << ", tem um membro!";
 		} else {
-			s << ", which has " << memberCount << " members, " << guild->getMembersOnline().size() << " of them online.";
+			s << ", tem " << memberCount << " membros, de " << guild->getMembersOnline().size() << " que estão por ai!.";
 		}
 	}
 	return s.str();
@@ -232,6 +233,11 @@ Item* Player::getWeapon(slots_t slot, bool ignoreAmmo) const
 
 Item* Player::getWeapon(bool ignoreAmmo/* = false*/) const
 {
+		/* If player is dual wielding, we already assured he has weapons in both hands. */
+	if (isDualWielding()) {
+		return getWeapon(getAttackHand(), ignoreAmmo);
+	}
+
 	Item* item = getWeapon(CONST_SLOT_LEFT, ignoreAmmo);
 	if (item) {
 		return item;
@@ -310,29 +316,49 @@ void Player::getShieldAndWeapon(const Item*& shield, const Item*& weapon) const
 	shield = nullptr;
 	weapon = nullptr;
 
-	for (uint32_t slot = CONST_SLOT_RIGHT; slot <= CONST_SLOT_LEFT; slot++) {
-		Item* item = inventory[slot];
-		if (!item) {
-			continue;
+	if (isDualWielding()) {
+		if (lastAttackHand == HAND_LEFT) {
+			shield = inventory[CONST_SLOT_RIGHT];
+			weapon = inventory[CONST_SLOT_LEFT];
+		} else {
+			shield = inventory[CONST_SLOT_LEFT];
+			weapon = inventory[CONST_SLOT_RIGHT];
 		}
 
-		switch (item->getWeaponType()) {
-			case WEAPON_NONE:
-				break;
-
-			case WEAPON_SHIELD: {
-				if (!shield || (shield && item->getDefense() > shield->getDefense())) {
-					shield = item;
-				}
-				break;
+		} else {
+		for (uint32_t slot = CONST_SLOT_RIGHT; slot <= CONST_SLOT_LEFT; slot++) {
+			Item *item = inventory[slot];
+			if (!item) {
+				continue;
 			}
 
-			default: { // weapons that are not shields
-				weapon = item;
-				break;
+			switch (item->getWeaponType()) {
+				case WEAPON_NONE:
+					break;
+
+			case WEAPON_SHIELD: {
+					if (!shield || (shield && item->getDefense() > shield->getDefense())) {
+						shield = item;
+					}
+					break;
+ 				}
+
+ 				default: { // weapons that are not shields
+					weapon = item;
+					break;
+				}
 			}
 		}
 	}
+}
+
+bool Player::isDualWielding() const
+{
+	/* Not checking dual wield because the player can't wear two weapons worn without it */
+	if (this->getWeapon(CONST_SLOT_LEFT, true) && this->getWeapon(CONST_SLOT_RIGHT, true)) {
+		return true;
+	}
+	return false;
 }
 
 int32_t Player::getDefense() const
@@ -363,6 +389,17 @@ int32_t Player::getDefense() const
 
 	defenseValue = static_cast<int32_t>(defenseValue * vocation->defenseMultiplier);
 	return static_cast<int32_t>(std::ceil((static_cast<float>(defenseSkill * (defenseValue * 0.015)) + (defenseValue * 0.1)) * defenseFactor));
+}
+
+uint32_t Player::getAttackSpeed() const {
+	uint32_t ret = vocation->getAttackSpeed();
+
+	if (isDualWielding()) {
+		double multiplier = 100.0 / static_cast<double>(g_config.getNumber(ConfigManager::DUAL_WIELDING_SPEED_RATE));
+		ret = static_cast<uint32_t>(std::ceil(static_cast<double>(ret) * multiplier));
+	}
+
+	return ret;
 }
 
 float Player::getAttackFactor() const
@@ -476,7 +513,7 @@ void Player::addSkillAdvance(skills_t skill, uint64_t count)
 		skills[skill].percent = 0;
 
 		std::ostringstream ss;
-		ss << "You advanced to " << getSkillName(skill) << " level " << skills[skill].level << '.';
+		ss << "Você avançou no nivel de " << getSkillName(skill) << " para " << skills[skill].level << '.';
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 
 		g_creatureEvents->playerAdvance(this, skill, (skills[skill].level - 1), skills[skill].level);
@@ -668,7 +705,7 @@ void Player::addStorageValue(const uint32_t key, const int32_t value, const bool
 			auto currentFrameTime = g_dispatcher.getDispatcherCycle();
 			if (lastQuestlogUpdate != currentFrameTime && g_game.quests.isQuestStorage(key, value, oldValue)) {
 				lastQuestlogUpdate = currentFrameTime;
-				sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your questlog has been updated.");
+				sendTextMessage(MESSAGE_EVENT_ADVANCE, "Seu livro de missões foi atualizado.");
 			}
 		}
 	} else {
@@ -1122,7 +1159,7 @@ void Player::onCreatureAppear(Creature* creature, bool isLogin)
 			bed->wakeUp(this);
 		}
 
-		std::cout << name << " has logged in." << std::endl;
+		std::cout << name << " logou." << std::endl;
 
 		if (guild) {
 			guild->addMember(this);
@@ -1244,7 +1281,7 @@ void Player::onRemoveCreature(Creature* creature, bool isLogout)
 
 		g_chat->removeUserFromAllChannels(*this);
 
-		std::cout << getName() << " has logged out." << std::endl;
+		std::cout << getName() << " deslogou." << std::endl;
 
 		if (guild) {
 			guild->removeMember(this);
@@ -1333,7 +1370,7 @@ void Player::onCreatureMove(Creature* creature, const Tile* newTile, const Posit
 		// TODO: This shouldn't be hardcoded
 		for (uint32_t modalWindowId : modalWindows) {
 			if (modalWindowId == std::numeric_limits<uint32_t>::max()) {
-				sendTextMessage(MESSAGE_EVENT_ADVANCE, "Offline training aborted.");
+				sendTextMessage(MESSAGE_EVENT_ADVANCE, "Abortou do treino offline!");
 				break;
 			}
 		}
@@ -1583,7 +1620,7 @@ void Player::removeMessageBuffer()
 			addCondition(condition);
 
 			std::ostringstream ss;
-			ss << "You are muted for " << muteTime << " seconds.";
+			ss << "Você esta mutado por " << muteTime << " segundos.";
 			sendTextMessage(MESSAGE_STATUS_SMALL, ss.str());
 		}
 	}
@@ -1627,7 +1664,7 @@ void Player::addManaSpent(uint64_t amount)
 		manaSpent = 0;
 
 		std::ostringstream ss;
-		ss << "You advanced to magic level " << magLevel << '.';
+		ss << "Seu nivel de magia aumentou para " << magLevel << '.';
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 
 		g_creatureEvents->playerAdvance(this, SKILL_MAGLEVEL, magLevel - 1, magLevel);
@@ -1678,9 +1715,9 @@ void Player::addExperience(Creature* source, uint64_t exp, bool sendText/* = fal
 	experience += exp;
 
 	if (sendText) {
-		std::string expString = std::to_string(exp) + (exp != 1 ? " experience points." : " experience point.");
+		std::string expString = std::to_string(exp) + (exp != 1 ? " pontos de experiencia." : " ponto de experiencia.");
 
-		TextMessage message(MESSAGE_EXPERIENCE, "You gained " + expString);
+		TextMessage message(MESSAGE_EXPERIENCE, "Você ganhou " + expString);
 		message.position = position;
 		message.primary.value = exp;
 		message.primary.color = TEXTCOLOR_WHITE_EXP;
@@ -1691,7 +1728,7 @@ void Player::addExperience(Creature* source, uint64_t exp, bool sendText/* = fal
 		list.erase(this);
 		if (!list.empty()) {
 			message.type = MESSAGE_EXPERIENCE_OTHERS;
-			message.text = getName() + " gained " + expString;
+			message.text = getName() + " ganhou " + expString;
 			for (Creature* spectator : list) {
 				spectator->getPlayer()->sendTextMessage(message);
 			}
@@ -1732,7 +1769,7 @@ void Player::addExperience(Creature* source, uint64_t exp, bool sendText/* = fal
 		g_creatureEvents->playerAdvance(this, SKILL_LEVEL, prevLevel, level);
 
 		std::ostringstream ss;
-		ss << "You advanced from Level " << prevLevel << " to Level " << level << '.';
+		ss << "Você avançou de " << prevLevel << " pro nivel " << level << '.';
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 	}
 
@@ -1763,7 +1800,7 @@ void Player::removeExperience(uint64_t exp, bool sendText/* = false*/)
 
 		std::string expString = std::to_string(lostExp) + (lostExp != 1 ? " experience points." : " experience point.");
 
-		TextMessage message(MESSAGE_EXPERIENCE, "You lost " + expString);
+		TextMessage message(MESSAGE_EXPERIENCE, "Você perdeu " + expString);
 		message.position = position;
 		message.primary.value = lostExp;
 		message.primary.color = TEXTCOLOR_RED;
@@ -1774,7 +1811,7 @@ void Player::removeExperience(uint64_t exp, bool sendText/* = false*/)
 		list.erase(this);
 		if (!list.empty()) {
 			message.type = MESSAGE_EXPERIENCE_OTHERS;
-			message.text = getName() + " lost " + expString;
+			message.text = getName() + " perdeu " + expString;
 			for (Creature* spectator : list) {
 				spectator->getPlayer()->sendTextMessage(message);
 			}
@@ -1807,7 +1844,7 @@ void Player::removeExperience(uint64_t exp, bool sendText/* = false*/)
 		}
 
 		std::ostringstream ss;
-		ss << "You were downgraded from Level " << oldLevel << " to Level " << level << '.';
+		ss << "Você perdeu do nivel " << oldLevel << " para o nivel " << level << '.';
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 	}
 
@@ -2076,7 +2113,7 @@ void Player::death(Creature* lastHitCreature)
 
 			if (oldLevel != level) {
 				std::ostringstream ss;
-				ss << "You were downgraded from Level " << oldLevel << " to Level " << level << '.';
+				ss << "Você perdeu do nivel " << oldLevel << " para o nivel " << level << '.';
 				sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 			}
 
@@ -2168,9 +2205,9 @@ Item* Player::getCorpse(Creature* lastHitCreature, Creature* mostDamageCreature)
 	if (corpse && corpse->getContainer()) {
 		std::ostringstream ss;
 		if (lastHitCreature) {
-			ss << "You recognize " << getNameDescription() << ". " << (getSex() == PLAYERSEX_FEMALE ? "She" : "He") << " was killed by " << lastHitCreature->getNameDescription() << '.';
+			ss << "Voce reconhece " << getNameDescription() << ". " << (getSex() == PLAYERSEX_FEMALE ? "Ela" : "Ele") << " matou " << lastHitCreature->getNameDescription() << '.';
 		} else {
-			ss << "You recognize " << getNameDescription() << '.';
+			ss << "Voce reconhece " << getNameDescription() << '.';
 		}
 
 		corpse->setSpecialDescription(ss.str());
@@ -2235,9 +2272,9 @@ void Player::notifyStatusChange(Player* loginPlayer, VipStatus_t status)
 	client->sendUpdatedVIPStatus(loginPlayer->guid, status);
 
 	if (status == VIPSTATUS_ONLINE) {
-		client->sendTextMessage(TextMessage(MESSAGE_STATUS_SMALL, loginPlayer->getName() + " has logged in."));
+		client->sendTextMessage(TextMessage(MESSAGE_STATUS_SMALL, loginPlayer->getName() + " logou."));
 	} else if (status == VIPSTATUS_OFFLINE) {
-		client->sendTextMessage(TextMessage(MESSAGE_STATUS_SMALL, loginPlayer->getName() + " has logged out."));
+		client->sendTextMessage(TextMessage(MESSAGE_STATUS_SMALL, loginPlayer->getName() + " deslogou."));
 	}
 }
 
@@ -2254,13 +2291,13 @@ bool Player::removeVIP(uint32_t vipGuid)
 bool Player::addVIP(uint32_t vipGuid, const std::string& vipName, VipStatus_t status)
 {
 	if (VIPList.size() >= getMaxVIPEntries() || VIPList.size() == 200) { // max number of buddies is 200 in 9.53
-		sendTextMessage(MESSAGE_STATUS_SMALL, "You cannot add more buddies.");
+		sendTextMessage(MESSAGE_STATUS_SMALL, "Você não pode adicionar mais!.");
 		return false;
 	}
 
 	auto result = VIPList.insert(vipGuid);
 	if (!result.second) {
-		sendTextMessage(MESSAGE_STATUS_SMALL, "This player is already in your list.");
+		sendTextMessage(MESSAGE_STATUS_SMALL, "Esse jogador ja está na sua lista.");
 		return false;
 	}
 
@@ -2437,6 +2474,10 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 					           leftType == WEAPON_SHIELD || leftType == WEAPON_AMMO
 					           || type == WEAPON_SHIELD || type == WEAPON_AMMO) {
 						ret = RETURNVALUE_NOERROR;
+						} else if (type != WEAPON_DISTANCE && type != WEAPON_WAND &&
+						       g_config.getBoolean(ConfigManager::ALLOW_DUAL_WIELDING) &&
+						       vocation->canDualWield()) {
+						ret = RETURNVALUE_NOERROR;
 					} else {
 						ret = RETURNVALUE_CANONLYUSEONEWEAPON;
 					}
@@ -2477,6 +2518,10 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 					} else if (rightType == WEAPON_NONE || type == WEAPON_NONE ||
 					           rightType == WEAPON_SHIELD || rightType == WEAPON_AMMO
 					           || type == WEAPON_SHIELD || type == WEAPON_AMMO) {
+						ret = RETURNVALUE_NOERROR;
+						} else if (type != WEAPON_DISTANCE && type != WEAPON_WAND &&
+						       g_config.getBoolean(ConfigManager::ALLOW_DUAL_WIELDING) &&
+						       vocation->canDualWield()) {
 						ret = RETURNVALUE_NOERROR;
 					} else {
 						ret = RETURNVALUE_CANONLYUSEONEWEAPON;
@@ -3444,35 +3489,35 @@ void Player::onAddCombatCondition(ConditionType_t type)
 {
 	switch (type) {
 		case CONDITION_POISON:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are poisoned.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está envenenado.");
 			break;
 
 		case CONDITION_DROWN:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are drowning.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está sem respirar.");
 			break;
 
 		case CONDITION_PARALYZE:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are paralyzed.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está paralizado.");
 			break;
 
 		case CONDITION_DRUNK:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are drunk.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está estunado.");
 			break;
 
 		case CONDITION_CURSED:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are cursed.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está com medo.");
 			break;
 
 		case CONDITION_FREEZING:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are freezing.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está congelado.");
 			break;
 
 		case CONDITION_DAZZLED:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are dazzled.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está deslumbrado.");
 			break;
 
 		case CONDITION_BLEEDING:
-			sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are bleeding.");
+			sendTextMessage(MESSAGE_STATUS_DEFAULT, "Você está sangrando.");
 			break;
 
 		default:
@@ -3943,7 +3988,7 @@ void Player::addUnjustifiedDead(const Player* attacked)
 		return;
 	}
 
-	sendTextMessage(MESSAGE_EVENT_ADVANCE, "Warning! The murder of " + attacked->getName() + " was not justified.");
+	sendTextMessage(MESSAGE_EVENT_ADVANCE, "Cuidado! O assassinato de" + attacked->getName() + " não foi justificado.");
 
 	skullTicks += g_config.getNumber(ConfigManager::FRAG_TIME);
 
@@ -4416,7 +4461,7 @@ bool Player::addOfflineTrainingTries(skills_t skill, uint64_t tries)
 
 		if (magLevel != currMagLevel) {
 			std::ostringstream ss;
-			ss << "You advanced to magic level " << magLevel << '.';
+			ss << "Seu nivel magico aumentou para " << magLevel << '.';
 			sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 		}
 
@@ -4471,7 +4516,7 @@ bool Player::addOfflineTrainingTries(skills_t skill, uint64_t tries)
 
 		if (currSkillLevel != skills[skill].level) {
 			std::ostringstream ss;
-			ss << "You advanced to " << getSkillName(skill) << " level " << skills[skill].level << '.';
+			ss << "Você avançou em " << getSkillName(skill) << " pro nivel " << skills[skill].level << '.';
 			sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 		}
 
@@ -4497,7 +4542,7 @@ bool Player::addOfflineTrainingTries(skills_t skill, uint64_t tries)
 	}
 
 	std::ostringstream ss;
-	ss << std::fixed << std::setprecision(2) << "Your " << ucwords(getSkillName(skill)) << " skill changed from level " << oldSkillValue << " (with " << oldPercentToNextLevel << "% progress towards level " << (oldSkillValue + 1) << ") to level " << newSkillValue << " (with " << newPercentToNextLevel << "% progress towards level " << (newSkillValue + 1) << ')';
+	ss << std::fixed << std::setprecision(2) << "Seu " << ucwords(getSkillName(skill)) << " mudou de nivel " << oldSkillValue << " (com " << oldPercentToNextLevel << "% de progresso do nivel " << (oldSkillValue + 1) << ") para o nivel " << newSkillValue << " (com " << newPercentToNextLevel << "% de progresso para o nivel " << (newSkillValue + 1) << ')';
 	sendTextMessage(MESSAGE_EVENT_ADVANCE, ss.str());
 	return sendUpdate;
 }

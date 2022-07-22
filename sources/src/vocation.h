@@ -86,6 +86,10 @@ class Vocation
 			return fromVocation;
 		}
 
+		bool canDualWield() const {
+			return dualWield;
+		}
+
 		float meleeDamageMultiplier = 1.0f;
 		float distDamageMultiplier = 1.0f;
 		float defenseMultiplier = 1.0f;
@@ -111,14 +115,18 @@ class Vocation
 		uint32_t gainMana = gainMana;
 		uint32_t gainHP = gainHP;
 		uint32_t fromVocation = VOCATION_NONE;
+
 		uint32_t attackSpeed = attackSpeed;
 		uint32_t baseSpeed = baseSpeed;
 		uint16_t id;
+
 
 		uint16_t gainSoulTicks = gainSoulTicks;
 
 		uint8_t soulMax = soulMax;
 		uint8_t clientId = clientId;
+
+		bool dualWield = true;
 
 		static uint32_t skillBase[SKILL_LAST + 1];
 };

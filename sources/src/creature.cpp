@@ -226,12 +226,12 @@ void Creature::onWalk()
 void Creature::onWalk(Direction& dir)
 {
 	if (hasCondition(CONDITION_DRUNK)) {
-		uint32_t r = uniform_random(0, 20);
+		uint32_t r = uniform_random(0, 10);
 		if (r <= DIRECTION_DIAGONAL_MASK) {
 			if (r < DIRECTION_DIAGONAL_MASK) {
 				dir = static_cast<Direction>(r);
 			}
-			g_game.internalCreatureSay(this, TALKTYPE_MONSTER_SAY, "Hicks!", false);
+			g_game.addMagicEffect(getPosition(), CONST_ME_STUN);
 		}
 	}
 }
