@@ -1,5 +1,5 @@
 local combat = Combat()
-combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
+combat:setParameter(COMBAT_PARAM_TYPE, COMBAT_SONGDAMAGE)
 combat:setParameter(COMBAT_PARAM_EFFECT, 7)
 combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
 combat:setArea(createCombatArea(AREA_WALLFIELD))
@@ -13,7 +13,7 @@ end
 combat:setCallback(CALLBACK_PARAM_LEVELMAGICVALUE, "onGetFormulaValues")
 
 local combat2 = Combat()
-combat2:setParameter(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE)
+combat2:setParameter(COMBAT_PARAM_TYPE, COMBAT_SONGDAMAGE)
 combat2:setParameter(COMBAT_PARAM_EFFECT, 16)
 
 

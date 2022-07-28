@@ -153,6 +153,10 @@ Condition* Condition::createCondition(ConditionId_t id, ConditionType_t type, in
 		case CONDITION_FREEZING:
 		case CONDITION_DAZZLED:
 		case CONDITION_CURSED:
+		case CONDITION_SONGDAMAGE:
+		case CONDITION_BLOODDAMAGE:
+		case CONDITION_AIRDAMAGE:
+		case CONDITION_REALDAMAGE:
 		case CONDITION_BLEEDING:
 			return new ConditionDamage(id, type, buff, subId);
 
@@ -1247,6 +1251,23 @@ uint32_t ConditionDamage::getIcons() const
 			break;
 
 		case CONDITION_BLEEDING:
+			icons |= ICON_BLEEDING;
+			break;
+
+		case CONDITION_SONGDAMAGE:
+			icons |= ICON_BLEEDING;
+			break;
+
+
+		case CONDITION_BLOODDAMAGE:
+			icons |= ICON_BLEEDING;
+			break;
+
+		case CONDITION_AIRDAMAGE:
+			icons |= ICON_BLEEDING;
+			break;
+
+		case CONDITION_REALDAMAGE:
 			icons |= ICON_BLEEDING;
 			break;
 

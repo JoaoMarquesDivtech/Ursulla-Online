@@ -3633,6 +3633,10 @@ bool Game::combatBlockHit(CombatDamage& damage, Creature* attacker, Creature* ta
 				case COMBAT_FIREDAMAGE:
 				case COMBAT_PHYSICALDAMAGE:
 				case COMBAT_ICEDAMAGE:
+				case COMBAT_SONGDAMAGE:
+				case COMBAT_BLOODDAMAGE:
+				case COMBAT_AIRDAMAGE:
+				case COMBAT_REALDAMAGE:
 				case COMBAT_DEATHDAMAGE: {
 					hitEffect = CONST_ME_BLOCKHIT;
 					break;
@@ -3759,6 +3763,26 @@ void Game::combatGetTypeInfo(CombatType_t combatType, Creature* target, TextColo
 		case COMBAT_LIFEDRAIN: {
 			color = TEXTCOLOR_RED;
 			effect = CONST_ME_MAGIC_RED;
+			break;
+		}
+		case COMBAT_SONGDAMAGE: {
+			color = TEXTCOLOR_PURPLE;
+			effect = CONST_ME_SOUND_PURPLE;
+			break;
+		}
+		case COMBAT_BLOODDAMAGE: {
+			color = TEXTCOLOR_RED;
+			effect = CONST_ME_NONE;
+			break;
+		}
+		case COMBAT_AIRDAMAGE: {
+			color = TEXTCOLOR_LIGHTGREY;
+			effect = CONST_ME_NONE;
+			break;
+		}
+		case COMBAT_REALDAMAGE: {
+			color = TEXTCOLOR_YELLOW;
+			effect = CONST_ME_NONE;
 			break;
 		}
 		default: {

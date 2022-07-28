@@ -25,6 +25,7 @@
 #include "weapons.h"
 
 #include "pugicast.h"
+#include "configmanager.h"
 
 extern MoveEvents* g_moveEvents;
 extern Weapons* g_weapons;
@@ -702,6 +703,8 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			abilities.reflectPercent[combatTypeToIndex(COMBAT_ICEDAMAGE)] += value;
 			abilities.reflectPercent[combatTypeToIndex(COMBAT_HOLYDAMAGE)] += value;
 			abilities.reflectPercent[combatTypeToIndex(COMBAT_DEATHDAMAGE)] += value;
+			abilities.reflectPercent[combatTypeToIndex(COMBAT_SONGDAMAGE)] += value;
+			abilities.reflectPercent[combatTypeToIndex(COMBAT_AIRDAMAGE)] += value;
 		} else if (tmpStrValue == "absorbpercentelements") {
 			int16_t value = pugi::cast<int16_t>(valueAttribute.value());
 			Abilities& abilities = it.getAbilities();
@@ -722,7 +725,9 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			it.getAbilities().absorbPercent[combatTypeToIndex(COMBAT_ENERGYDAMAGE)] += pugi::cast<int16_t>(valueAttribute.value());
 		} else if (tmpStrValue == "absorbpercentfire") {
 			it.getAbilities().absorbPercent[combatTypeToIndex(COMBAT_FIREDAMAGE)] += pugi::cast<int16_t>(valueAttribute.value());
-		} else if (tmpStrValue == "absorbpercentpoison" ||	tmpStrValue == "absorbpercentearth") {
+		}else if (tmpStrValue == "absorbpercentair") {
+			it.getAbilities().absorbPercent[combatTypeToIndex(COMBAT_AIRDAMAGE)] += pugi::cast<int16_t>(valueAttribute.value());
+		}else if (tmpStrValue == "absorbpercentpoison" || tmpStrValue == "absorbpercentearth") {
 			it.getAbilities().absorbPercent[combatTypeToIndex(COMBAT_EARTHDAMAGE)] += pugi::cast<int16_t>(valueAttribute.value());
 		} else if (tmpStrValue == "absorbpercentice") {
 			it.getAbilities().absorbPercent[combatTypeToIndex(COMBAT_ICEDAMAGE)] += pugi::cast<int16_t>(valueAttribute.value());
@@ -802,6 +807,8 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			ConditionDamage* conditionDamage = nullptr;
 
 			tmpStrValue = asLowerCaseString(valueAttribute.as_string());
+
+
 			if (tmpStrValue == "fire") {
 				conditionDamage = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_FIRE);
 				combatType = COMBAT_FIREDAMAGE;
@@ -817,7 +824,7 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 			} else if (tmpStrValue == "physical") {
 				conditionDamage = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_BLEEDING);
 				combatType = COMBAT_PHYSICALDAMAGE;
-			} else {
+			}else {
 				std::cout << "[Warning - Items::parseItemNode] Unknown field value: " << valueAttribute.as_string() << std::endl;
 			}
 
@@ -877,28 +884,28 @@ void Items::parseItemNode(const pugi::xml_node& itemNode, uint16_t id)
 		} else if (tmpStrValue == "leveldoor") {
 			it.levelDoor = pugi::cast<uint32_t>(valueAttribute.value());
 		} else if (tmpStrValue == "maletransformto" || tmpStrValue == "malesleeper") {
-			uint16_t value = pugi::cast<uint16_t>(valueAttribute.value());
-			it.transformToOnUse[PLAYERSEX_MALE] = value;
-			ItemType& other = getItemType(value);
-			if (other.transformToFree == 0) {
-				other.transformToFree = it.id;
-			}
+		uint16_t value = pugi::cast<uint16_t>(valueAttribute.value());
+		it.transformToOnUse[PLAYERSEX_MALE] = value;
+		ItemType& other = getItemType(value);
+		if (other.transformToFree == 0) {
+			other.transformToFree = it.id;
+		}
 
-			if (it.transformToOnUse[PLAYERSEX_FEMALE] == 0) {
-				it.transformToOnUse[PLAYERSEX_FEMALE] = value;
-			}
-		} else if (tmpStrValue == "femaletransformto" || tmpStrValue == "femalesleeper") {
-			uint16_t value = pugi::cast<uint16_t>(valueAttribute.value());
+		if (it.transformToOnUse[PLAYERSEX_FEMALE] == 0) {
 			it.transformToOnUse[PLAYERSEX_FEMALE] = value;
+		}
+		} else if (tmpStrValue == "femaletransformto" || tmpStrValue == "femalesleeper") {
+		uint16_t value = pugi::cast<uint16_t>(valueAttribute.value());
+		it.transformToOnUse[PLAYERSEX_FEMALE] = value;
 
-			ItemType& other = getItemType(value);
-			if (other.transformToFree == 0) {
-				other.transformToFree = it.id;
-			}
+		ItemType& other = getItemType(value);
+		if (other.transformToFree == 0) {
+			other.transformToFree = it.id;
+		}
 
-			if (it.transformToOnUse[PLAYERSEX_MALE] == 0) {
-				it.transformToOnUse[PLAYERSEX_MALE] = value;
-			}
+		if (it.transformToOnUse[PLAYERSEX_MALE] == 0) {
+			it.transformToOnUse[PLAYERSEX_MALE] = value;
+		}
 		} else if (tmpStrValue == "transformto") {
 			it.transformToFree = pugi::cast<uint16_t>(valueAttribute.value());
 		} else if (tmpStrValue == "destroyto") {

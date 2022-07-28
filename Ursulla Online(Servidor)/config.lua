@@ -74,7 +74,7 @@ mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
 mysqlDatabase = "ursulla"
-mysqlPort = "3306"
+mysqlPort = "3307"
 passwordType = "sha1"
 mysqlSock = ""
 

@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -75,7 +75,10 @@
     <IncludePath>F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\pugixml\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mysql-connector-c\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mpir\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\LuaJIT\include;F:\Projeto\Ursulla-Online\sources\SDK\boost_1_60_0_32;$(IncludePath)</IncludePath>
     <LibraryPath>F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mpir\lib;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\LuaJIT\lib;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mysql-connector-c\lib;F:\Projeto\Ursulla-Online\sources\SDK\boost_1_60_0_32\lib32-msvc-14.0;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\pugixml\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mysql-connector-c\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mpir\include;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\LuaJIT\include;E:\boost_1_60_0;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mysql-connector-c\lib64;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\mpir\lib64;F:\Projeto\Ursulla-Online\sources\SDK\tfs-sdk-3.2\LuaJIT\lib64;E:\boost_1_60_0\lib64-msvc-14.0;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>_CONSOLE;$(PREPROCESSOR_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>

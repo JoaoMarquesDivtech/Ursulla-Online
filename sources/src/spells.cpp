@@ -400,6 +400,10 @@ bool Spell::configureSpell(const pugi::xml_node& node)
 		"drowncondition",
 		"freezecondition",
 		"cursecondition",
+		"songcondition",
+		"bloodcondition",
+		"aircondition",
+		"realcondition",
 		"dazzlecondition"
 	};
 
@@ -1524,7 +1528,7 @@ bool InstantSpell::SummonMonster(const InstantSpell* spell, Creature* creature, 
 		}
 
 		if (player->getSummonCount() >= 2) {
-			player->sendCancelMessage("Voce não pode sumonar criaturas.");
+			player->sendCancelMessage("Voce nÃ£o pode sumonar criaturas.");
 			g_game.addMagicEffect(player->getPosition(), CONST_ME_POFF);
 			return false;
 		}

@@ -93,6 +93,9 @@ void Monster::onCreatureAppear(Creature* creature, bool isLogin)
 {
 	Creature::onCreatureAppear(creature, isLogin);
 
+	creature->registerCreatureEvent("HealthChange");
+	creature->registerCreatureEvent("Mastery");
+
 	if (mType->info.creatureAppearEvent != -1) {
 		// onCreatureAppear(self, creature)
 		LuaScriptInterface* scriptInterface = mType->info.scriptInterface;

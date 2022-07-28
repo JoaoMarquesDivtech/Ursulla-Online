@@ -898,7 +898,13 @@ bool WeaponWand::configureEvent(const pugi::xml_node& node)
 			params.combatType = COMBAT_DEATHDAMAGE;
 		} else if (tmpStrValue == "holy") {
 			params.combatType = COMBAT_HOLYDAMAGE;
-		} else {
+		}else if (tmpStrValue == "song") {
+			params.combatType = COMBAT_SONGDAMAGE;
+		}else if (tmpStrValue == "air") {
+			params.combatType = COMBAT_AIRDAMAGE;
+		}else if (tmpStrValue == "blood") {
+			params.combatType = COMBAT_BLOODDAMAGE;
+		}else {
 			std::cout << "[Warning - WeaponWand::configureEvent] Type \"" << attr.as_string() << "\" does not exist." << std::endl;
 		}
 	}

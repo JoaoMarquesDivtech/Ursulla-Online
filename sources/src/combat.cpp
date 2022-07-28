@@ -162,6 +162,19 @@ ConditionType_t Combat::DamageToConditionType(CombatType_t type)
 		case COMBAT_PHYSICALDAMAGE:
 			return CONDITION_BLEEDING;
 
+		case COMBAT_SONGDAMAGE:
+			return CONDITION_SONGDAMAGE;
+
+		case COMBAT_BLOODDAMAGE:
+			return CONDITION_BLOODDAMAGE;
+
+		case COMBAT_AIRDAMAGE:
+			return CONDITION_AIRDAMAGE;
+
+		case COMBAT_REALDAMAGE:
+			return CONDITION_REALDAMAGE;
+
+
 		default:
 			return CONDITION_NONE;
 	}

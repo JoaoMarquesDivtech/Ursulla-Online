@@ -32,8 +32,28 @@ function refresh(player)
 	local agilityValue = tostring(player:getStorageValue(attributes.agility.storage))
 	local defenseValue = tostring(player:getStorageValue(attributes.defense.storage))
 	local pointsValue = tostring(player:getStorageValue(pointsStorage))
+	local FireSkill = tostring(getSkillLevel(player,"FireSkill"))
+	local EarthSkill = tostring(getSkillLevel(player,"EarthSkill"))
+	local IceSkill = tostring(getSkillLevel(player,"IceSkill"))
+	local DeathSkill = tostring(getSkillLevel(player,"DeathSkill"))
+	local EnergySkill = tostring(getSkillLevel(player,"EnergySkill"))
+	local AirSkill = tostring(getSkillLevel(player,"AirSkill"))
+	local BloodSkill = tostring(getSkillLevel(player,"BloodSkill"))
+	local SongSkill = tostring(getSkillLevel(player,"SongSkill"))
+	local HolySkill = tostring(getSkillLevel(player,"HolySkill"))
+	local FireSkillPercent = tostring(getSkillPercent(player,"FireSkill"))
+	local EarthSkillPercent = tostring(getSkillPercent(player,"EarthSkill"))
+	local IceSkillPercent = tostring(getSkillPercent(player,"IceSkill"))
+	local DeathSkillPercent = tostring(getSkillPercent(player,"DeathSkill"))
+	local EnergySkillPercent = tostring(getSkillPercent(player,"EnergySkill"))
+	local AirSkillPercent = tostring(getSkillPercent(player,"AirSkill"))
+	local BloodSkillPercent = tostring(getSkillPercent(player,"BloodSkill"))
+	local SongSkillPercent = tostring(getSkillPercent(player,"SongSkill"))
+	local HolySkillPercent = tostring(getSkillPercent(player,"HolySkill"))
 
-	local data = "refresh,"..pointsValue..","..staminaValue..","..wisdomValue..","..intelligenceValue..","..strengthValue..","..dexterityValue..","..precisionValue..","..expertiseValue..","..speedValue ..","..agilityValue ..","..defenseValue
+
+
+	local data = "refresh,"..pointsValue..","..staminaValue..","..wisdomValue..","..intelligenceValue..","..strengthValue..","..dexterityValue..","..precisionValue..","..expertiseValue..","..speedValue ..","..agilityValue ..","..defenseValue..","..FireSkill..","..IceSkill..","..EarthSkill..","..DeathSkill..","..EnergySkill..","..AirSkill..","..BloodSkill..","..SongSkill..","..HolySkill	..","..FireSkillPercent..","..IceSkillPercent..","..EarthSkillPercent..","..DeathSkillPercent..","..EnergySkillPercent..","..AirSkillPercent..","..BloodSkillPercent..","..SongSkillPercent..","..HolySkillPercent
 	sendBuffer(player, data)
 end
 
@@ -60,7 +80,7 @@ function addStamina(player)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.stamina.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.stamina.storage).." pontos para distribuir!")
+	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.stamina.storage).." pontos para distribuir!")
 	end
 end
 
@@ -73,7 +93,7 @@ function addWisdom(player)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.wisdom.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.wisdom.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.wisdom.storage).." pontos para distribuir!")
 	end
 end
 
@@ -84,7 +104,7 @@ function addIntelligence(player)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.intelligence.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.intelligence.storage).." pontos para distribuir!")	
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.intelligence.storage).." pontos para distribuir!")	
 	end
 end
 
@@ -95,7 +115,7 @@ function addStrength(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - attributes.strength.neededPoints)
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.strength.storage).." pontos para distribuir!")	
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.strength.storage).." pontos para distribuir!")	
 	end
 end
 
@@ -106,7 +126,7 @@ function addDexterity(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.dexterity.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.dexterity.storage).." pontos para distribuir!")	
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.dexterity.storage).." pontos para distribuir!")	
 	end
 end
 
@@ -118,7 +138,7 @@ function addPrecision(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.precision.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.precision.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.precision.storage).." pontos para distribuir!")
 	end
 end
 
@@ -129,7 +149,7 @@ function addExpertise(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.expertise.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.expertise.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.expertise.storage).." pontos para distribuir!")
 	end
 end
 
@@ -141,7 +161,7 @@ function addSpeed(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.speed.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.speed.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.speed.storage).." pontos para distribuir!")
 	end
 end
 
@@ -152,7 +172,7 @@ function addAgility(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.agility.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.agility.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.agility.storage).." pontos para distribuir!")
 	end
 end
 
@@ -163,7 +183,7 @@ function addDefense(player, atr)
 		player:setStorageValue(pointsStorage, currentPoints - att(player, attributes.defense.storage))
 		player:getPosition():sendMagicEffect(sucessEffect)
 	else
-		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Você precisa de "..att(player, attributes.defense.storage).." pontos para distribuir!")
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "Vocï¿½ precisa de "..att(player, attributes.defense.storage).." pontos para distribuir!")
 	end
 end
 
