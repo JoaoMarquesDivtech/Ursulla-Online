@@ -29,7 +29,6 @@ local function onMastery(cid ,storage, storage2, storage3, tipo, dano)
 
     cid:setStorageValue(storage, experiencia + dano)
     local experiencia, experiencia1 = cid:getStorageValue(storage), cid:getStorageValue(storage2)
-    cid:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Experiencia em "..tipo.." ("..experiencia.."/"..experiencia1..")")
 
     
     if(experiencia == experiencia1 or experiencia >= experiencia1)  then
