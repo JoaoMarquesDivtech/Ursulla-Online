@@ -1,3 +1,4 @@
 # Ursulla-Online
 Servidor derivado de tibia
-$ sudo apt install git cmake build-essential libluajit-5.1-dev libmysqlclient-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev libpugixml-dev libcrypto++-dev libfmt-dev
+Criado por joão marcelo daltro marques e com contribuições de varias pessoas
+O projeto tem como principal objetivo, alcançar a essencia do verdadeiro RPG
