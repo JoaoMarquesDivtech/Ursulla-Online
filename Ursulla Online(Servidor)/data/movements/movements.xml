@@ -315,8 +315,11 @@
 	<movevent event="AddItem" itemid="7360" function="onAddField" />
 
 	<!-- Swimming -->
-	<movevent event="StepIn" fromid="4620" toid="4625" script="swimming.lua" />
-	<movevent event="StepOut" fromid="4620" toid="4625" script="swimming.lua" />
+	<movevent event="StepIn" fromid="4608" toid="4625" script="swimming.lua" />
+	<movevent event="StepIn" fromid="4664" toid="4666" script="swimming.lua" />
+	<movevent event="StepOut" fromid="4608" toid="4625" script="swimming.lua" />
+	<movevent event="StepOut" fromid="4664" toid="4666" script="swimming.lua" />
+	<movevent event="StepOut" fromid="3592" toid="3596" script="swimming.lua" />
 	<movevent event="StepIn" fromid="5405" toid="5410" script="drowning.lua" />
 	<movevent event="StepOut" fromid="5405" toid="5410" script="drowning.lua" />
     <movevent event="StepIn" fromid="9671" toid="9673" script="drowning.lua"/>

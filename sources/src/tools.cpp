@@ -1167,6 +1167,9 @@ const char* getReturnMessage(ReturnValue value)
 		case RETURNVALUE_YOUNEEDAWEAPONTOUSETHISSPELL:
 			return "You need to equip a weapon to use this spell.";
 
+		case RETURNVALUE_YOUNEEDAWANDTOUSETHISSPELL:
+			return "You need to equip a wand to use this spell.";
+
 		case RETURNVALUE_PLAYERISPZLOCKEDLEAVEPVPZONE:
 			return "You can not leave a pvp zone after attacking another player.";
 

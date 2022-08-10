@@ -535,6 +535,11 @@ bool Spell::configureSpell(const pugi::xml_node& node)
 		needWeapon = attr.as_bool();
 	}
 
+	if ((attr = node.attribute("needwand"))) {
+		needWand = attr.as_bool();
+	}
+
+
 	if ((attr = node.attribute("selftarget"))) {
 		selfTarget = attr.as_bool();
 	}
@@ -693,19 +698,36 @@ bool Spell::playerSpellCheck(Player* player) const
 		return false;
 	}
 
-	if (needWeapon) {
-		switch (player->getWeaponType()) {
-			case WEAPON_SWORD:
-			case WEAPON_CLUB:
-			case WEAPON_AXE:
+
+
+	if (needWeapon || needWand) {
+		if(needWeapon)
+			switch (player->getWeaponType()) {
+				case WEAPON_SWORD:
+				case WEAPON_CLUB:
+				case WEAPON_AXE:
+					break;
+
+				default: {
+					player->sendCancelMessage(RETURNVALUE_YOUNEEDAWEAPONTOUSETHISSPELL);
+					g_game.addMagicEffect(player->getPosition(), CONST_ME_POFF);
+					return false;
+				}
+			}
+
+		if(needWand)
+			switch (player->getWeaponType()) {
+			case WEAPON_WAND:
 				break;
 
 			default: {
-				player->sendCancelMessage(RETURNVALUE_YOUNEEDAWEAPONTOUSETHISSPELL);
+				player->sendCancelMessage(RETURNVALUE_YOUNEEDAWANDTOUSETHISSPELL);
 				g_game.addMagicEffect(player->getPosition(), CONST_ME_POFF);
 				return false;
 			}
-		}
+			}
+
+
 	}
 
 	if (isPremium() && !player->isPremium()) {

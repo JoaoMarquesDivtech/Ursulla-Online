@@ -1,11 +1,21 @@
 local outfit = {lookType = 267, lookHead = 0, lookBody = 0, lookLegs = 0, lookFeet = 0, lookTypeEx = 0, lookAddons = 0}
 
+
+
+
+
 function onStepIn(creature, item, position, fromPosition)
+
+	if(creature:isMonster()) then
+		creature:teleportTo(fromPosition)
+	end
+	
 	local player = creature:getPlayer()
 	if not player then
 		return true
 	end
 
+	
 	doSetCreatureOutfit(player, outfit, -1)
 end
 

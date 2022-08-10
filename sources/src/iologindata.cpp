@@ -740,7 +740,7 @@ bool IOLoginData::savePlayer(Player* player)
 	query << "`posz` = " << loginPosition.getZ() << ',';
 
 	query << "`cap` = " << (player->capacity / 100) << ',';
-	query << "`sex` = " << player->sex << ',';
+	query << "`sex` = " << static_cast<uint32_t>(player->sex) << ',';
 
 	if (player->lastLoginSaved != 0) {
 		query << "`lastlogin` = " << player->lastLoginSaved << ',';
@@ -808,6 +808,7 @@ bool IOLoginData::savePlayer(Player* player)
 	}
 	query << "`blessings` = " << static_cast<uint32_t>(player->blessings);
 	query << " WHERE `id` = " << player->getGUID();
+
 
 	DBTransaction transaction;
 	if (!transaction.begin()) {

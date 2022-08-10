@@ -190,6 +190,12 @@ class Spell : public BaseSpell
 
 		bool needTarget = false;
 		bool needWeapon = false;
+		bool needWand = false;
+		bool needSword = false;
+		bool needAxe = false;
+		bool needClub = false;
+		bool needShield = false;
+		bool needDistance = false;
 		bool selfTarget = false;
 		bool blockingSolid = false;
 		bool blockingCreature = false;
