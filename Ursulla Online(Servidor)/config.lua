@@ -60,8 +60,8 @@ timeBetweenExActions = 1000
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
-mapName = "map1"
-mapAuthor = "Elera"
+mapName = "ursulla"
+mapAuthor = "João Marcelo Daltro"
 
 -- Market
 marketOfferDuration = 30 * 24 * 60 * 60
@@ -72,9 +72,9 @@ maxMarketOffersAtATimePerPlayer = 100
 -- MySQL
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
-mysqlPass = ""
+mysqlPass = "5986"
 mysqlDatabase = "ursulla"
-mysqlPort = "3307"
+mysqlPort = "3306"
 passwordType = "sha1"
 mysqlSock = ""
 
